@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CNC Machining &mdash; Crimson Racing Wiki 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/version_switch.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CNC Lathe Work" href="CNC%20Lathe%20Work.html" />
+    <link rel="prev" title="3D Printing" href="3D%20Printing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Crimson Racing Wiki
+              <img src="../_static/CR-LogoFull-White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Subteams</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Aerodynamics/Aerodynamics.html">Aerodynamics</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Chassis/Chassis.html">Chassis</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Electrical/Electrical.html">Electrical</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../EV/EV.html">EV</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Manufacturing.html">Manufacturing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3D%20Printing.html">3D Printing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CNC Machining</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cnc-shop-tour">CNC Shop Tour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#safety">Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-cnc-mill-tooling">Introduction to CNC Mill Tooling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#endmill">Endmill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#drill">Drill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reamer">Reamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spot-center-drill">Spot/Center Drill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#face-mill">Face Mill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edge-finder">Edge Finder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vps-probe">VPS Probe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#axis-of-movement">Axis of Movement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feeds-and-speeds">Feeds and Speeds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#workholding">Workholding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cnc-vise">CNC Vise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toe-clamps">Toe Clamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-fixtures">Custom Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#soft-jaws">Soft Jaws</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wrapping-up">Wrapping Up</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vise-and-parallel-set-up">Vise and Parallel Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deburring">Deburring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#toe-clamp-set-up">Toe Clamp Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-tool-and-work-offsets">Manual Tool and Work Offsets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-tool-and-work-offsets">Automatic Tool and Work Offsets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-mill">Running the Mill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction-to-cam">Introduction to CAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#titan-building-block-1">Titan Building Block 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#titan-building-block-2">Titan Building Block 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#crimson-racing-part-based-on-current-state-of-manufacturing">Crimson Racing Part (based on current state of manufacturing)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="CNC%20Lathe%20Work.html">CNC Lathe Work</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#face-off-stock">Face off Stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#tool-offset">Tool Offset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CNC%20Lathe%20Work.html#zeroing-tool-in-z-axis">Zeroing tool in Z axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CNC%20Lathe%20Work.html#zeroing-tool-in-x-axis">Zeroing tool in x axis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#work-offset-tells-machine-where-front-face-of-stock-is">Work Offset (tells machine where front face of stock is)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#square-off-parting-tool">Square Off Parting Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#cam-upload">CAM Upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#drilling">Drilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CNC%20Lathe%20Work.html#manual-adjustment-of-tool-offset">Manual Adjustment of Tool Offset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Powertrain/Powertrain.html">Powertrain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Intake/Intake.html">Intake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Intake/Intake.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Intake/Intake.html#manufacturing-servicing">Manufacturing/Servicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Intake/Intake.html#components">Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Intake/Intake.html#air-filter">Air Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Intake/Intake.html#throttle-body">Throttle Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Intake/Intake.html#restrictor">Restrictor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Intake/Intake.html#plenum">Plenum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Intake/Intake.html#runners">Runners</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html">Exhaust</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#primary-runners">Primary Runners</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#goals-for-primaries">Goals for Primaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#pressure-wave-tuning">Pressure Wave Tuning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#effective-cam-duration">Effective Cam Duration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#primary-geometry">Primary Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#mounting-solution">Mounting Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#collector">Collector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#welded-vs-slipfit-collector">Welded vs. Slipfit Collector</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#secondary-runners">Secondary Runners</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#secondary-runner-theory">Secondary Runner theory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#secondary-runner-design">Secondary Runner Design</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#muffler">Muffler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#goals-for-muffler">Goals for Muffler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#muffler-theory">Muffler Theory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Exhaust/Exhaust.html#muffler-design">Muffler Design</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html">Lubrication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#gasket">Gasket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#oil-pan">Oil pan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#trap-door-system">Trap Door System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#oil-pickup">Oil Pickup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#baffle-tray">Baffle Tray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#oil-selection">Oil Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Lubrication/Lubrication.html#oil-heat-load">Oil Heat Load</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html">Fuel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#fuel-cell">Fuel Cell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#fuel-filler-neck">Fuel Filler Neck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#plumbing">Plumbing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#fuel-rail">Fuel Rail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Fuel/Fuel.html#injectors">Injectors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html">Shifting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#pneumatic-system">Pneumatic System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#shift-delay">Shift Delay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#reliability">Reliability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#weight-reduction">Weight Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#pneumatic-lines">Pneumatic Lines</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#electronic-shifting">Electronic Shifting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Shifting/Shifting.html#gear-sensing">Gear Sensing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Drivetrain/Drivetrain.html">Drivetrain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Drivetrain/Drivetrain.html#parts-overview">Parts Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Drivetrain/Differential/Differential.html">Differential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Drivetrain/Differential/Diff%20Carriers.html">Carriers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Drivetrain/Sprocket/Sprocket.html">Sprocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Powertrain/Drivetrain/Drivetrain.html">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Drivetrain/Drivetrain.html#bearings">Bearings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Drivetrain/Drivetrain.html#gearing">Gearing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Powertrain/Cooling/Cooling.html">Cooling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Powertrain/Cooling/Cooling.html#part-overview">Part Overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Suspension/Suspension.html">Suspension</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Suspension/Brakes/Brakes.html">Brakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Suspension/Geometry/Geometry.html">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Suspension/Structures/Structures.html">Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../IT/IT.html">IT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../IT/Overview.html">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Overview.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Overview.html#networking">Networking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Overview.html#vms">VMs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../IT/VMs/Licensing.html">Licensing Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../IT/VMs/OMV.html">Open Media Vault</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../IT/VMs/Windows.html">Windows VMs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../IT/VMs/NewVM/vmCreate.html">Creating a VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../IT/VMs/NewVM/vmSetup.html">Setting Up a VM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Overview.html#vm-host-machine">VM Host Machine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../IT/Hardware.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Hardware.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Hardware.html#vm-host-machine">VM Host Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Hardware.html#vms">VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Hardware.html#networking">Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../IT/Software.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Software.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Software.html#vm-host-machine">VM Host Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Software.html#vms">VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/Software.html#networking">Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../IT/DirMan.html">Active Directory Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../IT/LinuxDocs.html">Basic Linux Reference Docs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../IT/LinuxDocs.html#debian">Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../IT/LinuxDocs.html#centos">CentOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Ansys%20Fluent/Ansys%20Fluent.html">Ansys Fluent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Ansys%20Icepak/Ansys%20Icepak.html">Ansys Icepak</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Ansys%20Icepak/Ansys%20Icepak.html#contents">Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Initial%20Thoughts.html">Initial Thoughts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Initial%20Thoughts.html#main-interface">Main Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Initial%20Thoughts.html#upsides">Upsides</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Initial%20Thoughts.html#random-notes">Random Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html">Top Menus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#desktop">Desktop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#view">View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#draw">Draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#model">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#simulation">Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#results">Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#automation">Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Top%20Menus.html#minerva">Minerva</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Mesh%20Generation.html">Mesh Generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Mesh%20Generation.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Mesh%20Generation.html#advanced">Advanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Mesh%20Generation.html#defaults">Defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Simulation%20Setup.html">Simulation Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Simulation%20Setup.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Simulation%20Setup.html#convergence">Convergence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Simulation%20Setup.html#solver-settings">Solver Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Simulation%20Setup.html#defaults">Defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Post%20Processing.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Ansys%20Icepak/Parameterization.html">Parameterization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Parameterization.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Parameterization.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Parameterization.html#linking-variables-to-the-model">Linking Variables to the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Ansys%20Icepak/Parameterization.html#running-the-simulations">Running the Simulations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Ansys%20Mechanical/Ansys%20Mechanical.html">Ansys Mechanical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Blender/Blender.html">Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Intro.html">Intro to Polygon-Based Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Intro.html#connecting-the-three-together">Connecting the three together</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Intro.html#quads">Quads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Intro.html#tris">Tris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Intro.html#n-gons-and-poles">N-Gons and Poles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Modeling/Modeling.html">Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html">Primitives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-plane">The Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-cube">The Cube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-circle">The Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-uv-sphere">The UV Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-ico-sphere">The Ico-Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-cylinder">The Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-cone">The Cone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-torus">The Torus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Primitives.html#the-monkey">The Monkey</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Modeling/Modifiers.html">Modifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Modifiers.html#generation">Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Modifiers.html#deformation">Deformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Modeling/Modifiers.html#physics">Physics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html">Shading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#input">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#output">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#shader">Shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#texture">Texture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#color">Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#vector">Vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Shading/Shading.html#converter">Converter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Lighting/Lighting.html">Lighting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Programs/Blender/Lighting/Lighting.html#back-to-basics">Back to Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Lighting/Lighting.html#purpose-of-lighting">Purpose of Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Lighting/Lighting.html#angles-of-lighting">Angles of Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Programs/Blender/Lighting/Lighting.html#controllable-properties">Controllable Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Programs/Blender/Rendering/Rendering.html">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Excel/Excel.html">Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Fusion%20360/Fusion%20360.html">Fusion 360</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/GT%20Suite/GT%20Suite.html">GT Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Hyperworks/Hyperworks.html">Hyperworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Lotus%20Shark/Lotus%20Shark.html">Lotus Shark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/M1%20Tune/M1%20Tune.html">M1 Tune</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Matlab/Matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Motec%20i2%20Pro/Motec%20i2%20Pro.html">Motec i2 Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Solidworks/Solidworks.html">Solidworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Programs/Win%20Geo/Win%20Geo.html">Win Geo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Crimson Racing Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="Manufacturing.html">Manufacturing</a></li>
+      <li class="breadcrumb-item active">CNC Machining</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/Manufacturing/CNC Machining.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cnc-machining">
+<h1>CNC Machining<a class="headerlink" href="#cnc-machining" title="Permalink to this heading"></a></h1>
+<p>Welcome to Crimson Racing’s guide to CNC machining. This guide is for members who are seeking to learn about how we make things.
+CNC machining is just one process in the manufacturing of a racecar along with welding, fabrication, and composites. But, more
+often than not, each of those other processes start with CNC Machining. For example, all of the Aero molds started off as blocks
+of foam before being CNC’d into the shapes of our wings and body work. CNC Machining is a big reason why we are able roll a
+brand-new car out of our shop every year. That being said, it is important that everyone operating our CNC equipment is fully
+trained on the process, always operating with safety as their #1 priority, and is willing to learn everyday no matter their
+experience with the process.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is just a guide. The purpose of this document is to guide your learning of CNC machining and everyone’s experience
+will differ. While the completion of the tasks in this guide will grant you access to our CNC shop, it does not mean you’ve
+mastered the process. You must continue to learn and ask questions every time you start up the machine.</p>
+</div>
+<section id="cnc-shop-tour">
+<h2>CNC Shop Tour<a class="headerlink" href="#cnc-shop-tour" title="Permalink to this heading"></a></h2>
+<p>This will be your very first step to becoming certified to run our CNC equipment. The tour will be given by Jack Terrell,
+the current Manufacturing Lead. You must message on Teams to schedule this tour. This will be a basic overview of our space and
+equipment along with sharing any prior experience or understanding of machining. Once you knew where the CNC shop is and what kind
+of processes we have you can move on.</p>
+</section>
+<section id="safety">
+<h2>Safety<a class="headerlink" href="#safety" title="Permalink to this heading"></a></h2>
+<p>Machining is very dangerous and can be deadly when not following proper safety precautions in the shop. High powered motors, sharp
+tooling, heavy material, and slippery surfaces are all examples of hazards in a CNC shop. It is important to always follow posted
+safety rules and to always be on the watch for possible hazards in the shop. If you see any hazards or see a fellow student not abiding
+by, or disobeying, any safety rules, step in, make sure they’re aware of it, and try to correct their actions. They may not know they’re
+doing something that can potentially be dangerous. If you’re ignored, or the issue persists, you may escalate to the appropriate lead,
+manager, or faculty/staff member. Any incidents caused by negligence of safety rules may result you or your team being temporarily
+prohibited from using CNC equipment. Please review and be familiar with the following safety documents.</p>
+<p>CNC Shop Safety Rules Poster</p>
+<p>CNC Lathe Safety Guidance</p>
+<p>CNC Mill Safety Guidance</p>
+<p>As a real-life example, OSHA publishes all incident reports made to them on their website. The following links are real reports of
+machining related incidents. Please read through these reports to understand the danger that is present when not following safety
+guidelines. Also understand that while machining is inherently dangerous, all incidents can be avoided by following the proper safety
+measures.</p>
+<p><a class="reference external" href="https://www.osha.gov/ords/imis/accidentsearch.accident_detail?id=202453437">Employee’s Fingertip Is Amputated By Milling Machine</a></p>
+<p><a class="reference external" href="https://www.osha.gov/ords/imis/accidentsearch.accident_detail?id=201142890">Employee Injured When Sleeve Entangled In Cutting Mill</a></p>
+<p><a class="reference external" href="https://www.osha.gov/ords/imis/accidentsearch.accident_detail?id=145170.015">Employee Is Killed When Arm Is Caught In Lathe</a></p>
+<p><a class="reference external" href="https://www.osha.gov/ords/imis/accidentsearch.accident_detail?id=143221.015">Employee Suffers Fractures When Shirt Is Caught In Lathe</a></p>
+<p>Before moving on, watch <a class="reference external" href="https://youtu.be/g7n_J-zVHcs">this</a> video with Titan from Titans of CNC. Get familiar with Titan as this
+guide will borrow from their online training course.</p>
+</section>
+<section id="introduction-to-cnc-mill-tooling">
+<span id="cnctoolingintro"></span><h2>Introduction to CNC Mill Tooling<a class="headerlink" href="#introduction-to-cnc-mill-tooling" title="Permalink to this heading"></a></h2>
+<p>Watch <a class="reference external" href="https://youtu.be/dFkLy5IWUKQ">this</a> video from the Haas Certification Program about the basics of the Haas CNC Mill.
+In our shop we have a Haas TM-2P 3-axis mill. It is an entry level tool room mill that is capable of movement 3 axis
+(x, y, and z). It has a 6,000 rpm spindle and can automatically cycle between 10 stored tools. Although it is an entry level mill,
+it is still plenty capable within its limits. As you learn more about the machine and start to use it, you’ll learn where these
+limits are and how you can work around them and how to maximize the capabilities of our machine.</p>
+<a class="reference internal image-reference" href="../_images/cncMill.png"><img alt="../_images/cncMill.png" src="../_images/cncMill.png" style="width: 291.0px; height: 218.5px;" /></a>
+<p>Model of the Haas TM-2P</p>
+<p>In order for the machine make cuts, it uses a series of tools that are specialized depending on the type of cuts you are making.</p>
+<section id="endmill">
+<h3>Endmill<a class="headerlink" href="#endmill" title="Permalink to this heading"></a></h3>
+<p>The endmill is the most general use tool available. It can be used for profiling, pocket clearing, boring, slotting and finishing.
+It comes in many different diameters, lengths, flute counts, and flute angles. Each of those features determine which operation(s)
+the endmill will work best for.</p>
+<img alt="../_images/endMillCuts.png" src="../_images/endMillCuts.png" />
+<a class="reference internal image-reference" href="../_images/endmill.jpg"><img alt="../_images/endmill.jpg" src="../_images/endmill.jpg" style="width: 484.44px; height: 77.22px;" /></a>
+<p>A common endmill</p>
+</section>
+<section id="drill">
+<h3>Drill<a class="headerlink" href="#drill" title="Permalink to this heading"></a></h3>
+<p>Drills used in machining and CNC are usually very similar to the ones used in hand drills. They come in many lengths and diameters
+in order to account for sized holes. Drills can only cut holes that are the same size as its diameter. They can also only plunge
+into the material, no side milling like an endmill. Since machining drills and hand drills are so similar, please use the
+designated drills for the job you are doing.</p>
+<img alt="../_images/cncDrillBits.jpg" src="../_images/cncDrillBits.jpg" />
+<p>CNC Drill Index</p>
+</section>
+<section id="reamer">
+<h3>Reamer<a class="headerlink" href="#reamer" title="Permalink to this heading"></a></h3>
+<p>Reamers are very similar to drills, but can’t make the initial hole on its own. Reamers only have cutting edges in the outer diameter
+of the tool. The purpose of the reamer is to create holes with a very precise diameter. These are not needed on all parts but come
+into use when machining frame jigging and parts that use dowel holes.</p>
+<img alt="../_images/cncReamer.jpg" src="../_images/cncReamer.jpg" />
+<p>CNC Reamer</p>
+</section>
+<section id="spot-center-drill">
+<h3>Spot/Center Drill<a class="headerlink" href="#spot-center-drill" title="Permalink to this heading"></a></h3>
+<p>Center Drills are used to create a small ‘divot’ on the face of a part which acts as a guide for a following drill. This ‘divot’
+centers the tip of the drill in the precise location of the hole. This essentially removes any drill “walk” and reduces the risk of
+breaking a drill inside of a hole.</p>
+<img alt="../_images/centerDrill.jpg" src="../_images/centerDrill.jpg" />
+<p>Center Drill</p>
+</section>
+<section id="face-mill">
+<h3>Face Mill<a class="headerlink" href="#face-mill" title="Permalink to this heading"></a></h3>
+<p>The Face Mill is used for facing material, usually the first operation in a program. Facing leaves a very flat, clean face on a
+surface of a part. These tools have inserts that can be switched out when they become dull.</p>
+<img alt="../_images/faceMill.jpg" src="../_images/faceMill.jpg" />
+<p>Face Mill</p>
+</section>
+<section id="edge-finder">
+<h3>Edge Finder<a class="headerlink" href="#edge-finder" title="Permalink to this heading"></a></h3>
+<p>The edge finder is used to find the edge of a part. This is important because the machine relies on these edges to establish an
+origin for its Work Coordinate System. The procedure for this process will be covered in (insert section number).</p>
+<img alt="../_images/edgeFinder.jpg" src="../_images/edgeFinder.jpg" />
+<p>edge finder</p>
+</section>
+<section id="vps-probe">
+<h3>VPS Probe<a class="headerlink" href="#vps-probe" title="Permalink to this heading"></a></h3>
+<p>The visual probing system is a feature of our mill that allows the machine to semi-automatically probe both the Work Coordinate
+System and Tool Offset System. This system is made up of the work probe and Optical Tool Setter (OTS). The procedure for this
+process will be covered in (insert section number).</p>
+<a class="reference internal image-reference" href="../_images/vpsProbe.jpg"><img alt="../_images/vpsProbe.jpg" src="../_images/vpsProbe.jpg" style="width: 177.0px; height: 172.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/otsPedestal.jpg"><img alt="../_images/otsPedestal.jpg" src="../_images/otsPedestal.jpg" style="width: 172.5px; height: 156.0px;" /></a>
+<p>A VPS Probe (left) and an OTS Pedestal (right)</p>
+</section>
+</section>
+<section id="axis-of-movement">
+<h2>Axis of Movement<a class="headerlink" href="#axis-of-movement" title="Permalink to this heading"></a></h2>
+<p>As mentioned before, our Haas TM-2P is a 3-axis mill. This means it can move in the X, Y, and Z.
+Watch <a class="reference external" href="https://youtu.be/OKFFRZevXlM">this</a> Titans of CNC video explaining axes of travel and machines with 4 and 5 axes of travel.</p>
+</section>
+<section id="feeds-and-speeds">
+<h2>Feeds and Speeds<a class="headerlink" href="#feeds-and-speeds" title="Permalink to this heading"></a></h2>
+<p>Feeds and Speeds refer to the linear speeds at which the table and spindle move, and the rotational speed of the spindle. Feeds and
+speeds are very important because they determine the rate at which the tool is removing material from the stock. Feeds and Speeds are
+based on material properties, depth of cut, type of operation, and type of tool. Baseline feeds and speeds references can be found
+online, but if you aren’t sure about what to use, check with your Manufacturing Lead before moving on. The wrong feeds and speeds can
+result in loud chattering, poor surface finish, and broken tools.</p>
+<p>Watch <a class="reference external" href="https://www.youtube.com/watch?v=zzzIpC39WUg">this</a> video from Haas about the importance and calculation of feeds and speeds.</p>
+</section>
+<section id="workholding">
+<h2>Workholding<a class="headerlink" href="#workholding" title="Permalink to this heading"></a></h2>
+<p>The strategy for fixing stock to the table in the machine is called workholding. There are many different types of workholding
+depending on the complexity of the part. The main strategies that we use in our shop are the CNC vise, toe clamps, and soft jaws.</p>
+<section id="cnc-vise">
+<h3>CNC Vise<a class="headerlink" href="#cnc-vise" title="Permalink to this heading"></a></h3>
+<p>The Vise is the standard for workholding. It can open up to 9” and is 6” wide. The use of parallels allows you to elevate the stock
+from the bottom of the vise to accommodate for many different operations. The procedure for vise and parallel set-up will be covered
+in <a class="reference internal" href="#viseparallelsetup"><span class="std std-ref">Vise and Parallel Set-Up</span></a>.</p>
+<a class="reference internal image-reference" href="../_images/kurtVise.jpg"><img alt="../_images/kurtVise.jpg" src="../_images/kurtVise.jpg" style="width: 237.0px; height: 111.0px;" /></a>
+<a class="reference internal image-reference" href="../_images/parallelSet.jpg"><img alt="../_images/parallelSet.jpg" src="../_images/parallelSet.jpg" style="width: 162.0px; height: 152.5px;" /></a>
+<p>A 6” Kurt vise (left) and a set of parallels (right)</p>
+</section>
+<section id="toe-clamps">
+<h3>Toe Clamps<a class="headerlink" href="#toe-clamps" title="Permalink to this heading"></a></h3>
+<p>Toe Clamps are used for holding stock to the table of the machine. This strategy is used for thinner, plate style material.
+They use the T-Slots on the table and a toe connected by a bolt to clamp the stock. They allow for many different shapes and sizes of
+stock but cause many issues if not set up correctly. Issues include tool colliding with clamp, machining into the table, and part
+releasing from stock before the operation is finished. The proper set-up procedure will be covered in <a class="reference internal" href="#toeclampsetup"><span class="std std-ref">Toe Clamp Set-Up</span></a>.</p>
+<a class="reference internal image-reference" href="../_images/toeClampKit.jpg"><img alt="../_images/toeClampKit.jpg" src="../_images/toeClampKit.jpg" style="width: 73.5px; height: 61.5px;" /></a>
+<a class="reference internal image-reference" href="../_images/toeClampAction.png"><img alt="../_images/toeClampAction.png" src="../_images/toeClampAction.png" style="width: 193.5px; height: 124.0px;" /></a>
+<p>A toe clamp kit (left) and a toe clamp in use (right)</p>
+</section>
+<section id="custom-fixtures">
+<h3>Custom Fixtures<a class="headerlink" href="#custom-fixtures" title="Permalink to this heading"></a></h3>
+<p>Custom Fixtures are machined prior to the part they are meant to hold. They are designed to hold the part using critical surfaces
+and contours of that part. These are about as easy to use a vise set up. Common examples of these fixtures are Upright and Bellcrank
+workholding.</p>
+<img alt="../_images/uprightWorkholding.png" src="../_images/uprightWorkholding.png" />
+<p>CR22 Upright Workholding</p>
+</section>
+<section id="soft-jaws">
+<h3>Soft Jaws<a class="headerlink" href="#soft-jaws" title="Permalink to this heading"></a></h3>
+<p>Soft Jaws are aluminum blanks of the hardened steel “hard” jaws that are already mounted to the vice. Soft Jaws are meant for parts
+that don’t have any flat contours that a normal vise face can’t grip, essentially any contours that aren’t flat and parallel can’t
+be gripped by a vise.</p>
+<img alt="../_images/softJaws.jpg" src="../_images/softJaws.jpg" />
+<p>Aluminum Soft Jaws</p>
+</section>
+<section id="wrapping-up">
+<h3>Wrapping Up<a class="headerlink" href="#wrapping-up" title="Permalink to this heading"></a></h3>
+<p>Workholding is important because when you’re machining, you want you stock to be as rigid as possible. This allows the cutting tool
+to cut properly and to prevent the stock from coming loose in the vise. If the stock comes loose in the vise, the tool might cut extra
+material and/or the stock may eject from the vise. It is also important to account for any workholding when programming an operation
+to ensure that the tool will not damage any fixtures.</p>
+</section>
+</section>
+<section id="vise-and-parallel-set-up">
+<span id="viseparallelsetup"></span><h2>Vise and Parallel Set-Up<a class="headerlink" href="#vise-and-parallel-set-up" title="Permalink to this heading"></a></h2>
+<p>Vise and Parallel Set-Up are the most crucial steps to achieving the highest accuracy possible for our equipment. Any chip or bur
+between any of the critical surfaces of the set up can throw off the flatness of the entire fixture. It is very important to clean
+every critical surface when setting up the vise and when placing parallels. Watch the following videos related to Vise and Parallel
+Set-Up.</p>
+<p><a class="reference external" href="https://youtu.be/P4QkO-m3t9w">How to Install a CNC Vise</a></p>
+<p><a class="reference external" href="https://youtu.be/FelgkWIXKr0">How to Install Parallels</a></p>
+<p><a class="reference external" href="https://youtu.be/zTZFu2vO8Og">Proper Material Placement</a></p>
+<p>An important step not mentioned in the videos is seating the material onto the parallels. This is done to ensure that the material
+is actually flat, not caught on any burs, and/or to make sure the parallels don’t vibrate off of the vise face. To seat the stock,
+you slowly tighten the vise while tapping the top of the stock on each end with a rubber mallet. This is done every time material is
+placed into the vise.</p>
+</section>
+<section id="deburring">
+<h2>Deburring<a class="headerlink" href="#deburring" title="Permalink to this heading"></a></h2>
+<p>Deburring is required when setting up material into a vise because it allows the vise to grip the material evenly. It also helps keep
+the material flat on the parallels. Watch the following video from Titans of CNC.</p>
+<p><a class="reference external" href="https://youtu.be/HESUKOVtXjI">Deburring Material Quickly</a></p>
+</section>
+<section id="toe-clamp-set-up">
+<span id="toeclampsetup"></span><h2>Toe Clamp Set-Up<a class="headerlink" href="#toe-clamp-set-up" title="Permalink to this heading"></a></h2>
+<p>Toe Clamps, as mentioned above, are used to mount material to the table of the mill. The first step in the process is setting the
+designated aluminum sheet directly on the table to provide an isolation between the table and stock. Then, you prepare the bolts and
+T-Slot mounts by threading the mounts into the bolts. You must use at least 3 Toe Clamps to ensure the stock won’t shift while machining.
+After the bolts are assembled, place the material on the sheet and position so that the edges of the stock are parallel with the
+table. Now, you can place the clamps, steps, and nuts onto the bolts. Once all the clamps are in place, tighten nuts while watching the
+make sure the stock doesn’t move. If the stock remains straight, it is fixed, and you can continue to set your work offsets.</p>
+</section>
+<section id="manual-tool-and-work-offsets">
+<h2>Manual Tool and Work Offsets<a class="headerlink" href="#manual-tool-and-work-offsets" title="Permalink to this heading"></a></h2>
+<p>Tool and Work Offsets are charts of references the controller uses to tell the machine how long the tools are and the position of the
+stock on the table. Setting these offsets allows the controller to know where the tip of the tool is and where the origin of the part is.
+This origin is going to be where everything in the program is based off of. These processes can be done automatically on our mill, but it
+is still important to understand the process in case you need to troubleshoot the system, or the system get damaged and requires
+maintenance. Watch these two videos from Titans of CNC that go over setting tool and work offsets manually.</p>
+<p><a class="reference external" href="https://youtu.be/oOSRLZ1vhXo">Setting Tool Offsets Manually</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=1TolsGpJZs4">Setting Work Offsets Manually</a></p>
+</section>
+<section id="automatic-tool-and-work-offsets">
+<h2>Automatic Tool and Work Offsets<a class="headerlink" href="#automatic-tool-and-work-offsets" title="Permalink to this heading"></a></h2>
+<p>The system that allows us to probe all of our Tool and Work Offsets was discussed in section
+<a class="reference internal" href="#cnctoolingintro"><span class="std std-ref">Introduction to CNC Mill Tooling</span></a>. It is a very expensive system so be sure to follow every step carefully with
+probing your offsets. This system allows you to create many more origins on a part than just a corner. These options for origin placement
+can be found in the controller when the probing tool is active. When probing it is important to always have an eye on the VPS probe when
+jogging the machine because the machine can’t prevent damage to the tool in Jog Mode. When in probing mode, the machine can stop movement
+if it senses an unexpected surface. Also, always keep in mind where the probes are in the machine when loading larger stock as to not hit
+a probe on accident. What the following videos from Titans of CNC to learn how to probe offsets automatically.</p>
+<p><a class="reference external" href="https://youtu.be/hU0OV1zl5bE">Probing Tool Offsets Automatically</a></p>
+<p><a class="reference external" href="https://youtu.be/1jKR5soLSks">Probing Work Offsets Automatically</a></p>
+</section>
+<section id="running-the-mill">
+<h2>Running the Mill<a class="headerlink" href="#running-the-mill" title="Permalink to this heading"></a></h2>
+<p>Once you workholding is set, you tools are loaded in the correct pockets and probed, and your part origin is probed, you’re ready to
+start running. Now it is time to upload your program. Watch the following video on uploading your NC program.</p>
+<p><a class="reference external" href="https://youtu.be/v2QgPNrROdU">Uploading Program to Controller from USB Device</a></p>
+<p>Now that your program is active in the controller there is one last step before being able to run it. This step is not necessary if you’ve
+run a similar program prior but is a good precautionary step regardless. This is simulating your program within the controller. This
+simulates all the tool paths that the program is telling the controller to make while also in the context of the tool and work offsets.
+This means if the program is asking the machine to move in a coordinate that exceeds a travel of the table, it will error out. It will also
+error out if there is an invalid code within the program. This is beneficial because you’ll see the error before you run and won’t be stuck
+with a half-finished part. Watch the following video on simulating your program.</p>
+<p><a class="reference external" href="https://youtu.be/_oltlIc-HKI">Simulating Your CNC Program</a></p>
+<p>Once you’ve ensured there are no errors in your CNC code, you can start your operation. This does not mean there won’t be any issues while
+running, it just means there will be no errors. It is very important that you are always alert and watching the machine while it’s running
+so if there are any issues you can stop the machine before causing any costly damage. While running a new program, always keep your thumb
+on the feed hold button. This button stops all motion except the spindle. This will allow you to stop the machine quickly if you see an
+issue or a potential collision. If you need to cut all power from the machine for any reason press the Emergency Stop button on the face of
+the controller. This will cut all motion, including the spindle, and error out the controller.</p>
+<p>Also while running, have the position pane up on the controller by pressing the POSITION button. This will show you 4 different forms of
+machine position. The two that can help you avoid any collisions are Program G54 and Distance to Go. The Program G54 position will show you
+where the tip and center of the tool are relative to the origin you set on the part. The Distance to Go will show you the distance the
+machine needs to travel to execute the current line of code. This is mostly helpful when the tool is plunging down to the material above the
+vise at the beginning of an operation. If you take all these steps and operate with an abundance of caution and attention to detail, you will
+be set up for a successful operation.</p>
+</section>
+<section id="introduction-to-cam">
+<h2>Introduction to CAM<a class="headerlink" href="#introduction-to-cam" title="Permalink to this heading"></a></h2>
+<p>Now that you have a functional understanding of what a CNC mill is and how it works, it’s time to learn how to get it to do what you want.
+The controller reads a programming language called G-Code. A pretty basic language made up of a handful of commands that relate to machine
+functions and X, Y, and Z coordinates. CAM acts as a bridge between a CAD model on your computer to a program with thousands of lines of
+G-Code. The CAM software that we use as students is called Autodesk Fusion 360. It is quite user friendly and is plenty capable for our CNC
+equipment.</p>
+<p>CAM requires a bit of set up, including the download of our tool libraries (all the tools that we own) and the specific post processor that
+corresponds with out controller. The post processor is what actually allows Fusion to spit out a G-Code program. This set up can be done
+with your sub team lead or manufacturing lead.</p>
+<p>Once you have these set up on your laptop, you are free to move on to the practical training. This will include how to model the training
+part in SOLIDWORKS, how to CAM the part in Fusion 360, and how to run the part on the mill (this step will be done with your sub team lead
+or manufacturing lead).</p>
+<p>The successful completion of the two training parts and the Crimson Racing part will conclude your CNC training, unless otherwise specified
+by your manufacturing lead.</p>
+</section>
+<section id="titan-building-block-1">
+<h2>Titan Building Block 1<a class="headerlink" href="#titan-building-block-1" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>SOLIDWORKS</dt><dd><p><a class="reference external" href="https://academy.titansofcnc.com/series/titan-1m/solidworks-tutorial-design-the-titan-1m">SW Video</a></p>
+</dd>
+<dt>Fusion 360</dt><dd><p><a class="reference external" href="https://academy.titansofcnc.com/series/titan-1m/how-to-program-the-titan-1m">Fusion 360 CAM p. 1</a></p>
+<p><a class="reference external" href="https://academy.titansofcnc.com/series/titan-1m/how-to-program-the-titan-1m-2nd-operation">Fusion 360 CAM p. 2</a></p>
+</dd>
+<dt>Run Part</dt><dd><p>See manufacturing lead to schedule time to run part</p>
+</dd>
+</dl>
+</section>
+<section id="titan-building-block-2">
+<h2>Titan Building Block 2<a class="headerlink" href="#titan-building-block-2" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>SOLIDWORKS</dt><dd><p><a class="reference external" href="https://academy.titansofcnc.com/series/titan-2m/solidworks-tutorial-design-the-titan-2m">SW Video</a></p>
+</dd>
+<dt>Fusion 360</dt><dd><p><a class="reference external" href="https://academy.titansofcnc.com/series/titan-2m/how-to-program-the-titan-2m">Fusion 360 CAM</a></p>
+</dd>
+<dt>Run Part</dt><dd><p>See manufacturing lead to schedule time to run part.</p>
+</dd>
+</dl>
+</section>
+<section id="crimson-racing-part-based-on-current-state-of-manufacturing">
+<h2>Crimson Racing Part (based on current state of manufacturing)<a class="headerlink" href="#crimson-racing-part-based-on-current-state-of-manufacturing" title="Permalink to this heading"></a></h2>
+<p>See manufacturing lead to request a training part.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="3D%20Printing.html" class="btn btn-neutral float-left" title="3D Printing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="CNC%20Lathe%20Work.html" class="btn btn-neutral float-right" title="CNC Lathe Work" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Crimson Racing.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

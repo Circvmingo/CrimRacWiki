@@ -1,0 +1,40 @@
+Cooling
+=======
+Main Goals of Cooling:
+    | Reliability 
+    |   Robust System 
+    |   Finish endurance
+    | Serviceability 
+    |   System is easily maintained 
+
+Part Overview
+-------------
+- Radiators (Single or Dual, Positioning, Series and Parallel)
+- Water Pump (Electronic, Mechanical) (80 vs 115 or others) (Cold Side vs Hot Side) 	
+- Investigate flow etc 
+- Pump Curves??
+- Stock or External Oil Cooler (with Lubrication)
+- Oil Cooler Splitter (with Lubrication)
+- Swirl Pot
+- Placement (highest point and inlet is off set) 
+- Coolant Lines
+- Validation on sizing and type (from BMRS) 
+- Weight loss??
+- Fans
+- CFM 
+- AMP Draw 
+- Sizing 
+- Sealing?? 
+- One Way Valves 
+- Aero Integration 
+- Ducting on Inlet 
+- Fan Shrouds 
+- Inlet/ Outlet Positioning on body
+
+
+
+
+
+
+
+

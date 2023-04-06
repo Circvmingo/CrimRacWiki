@@ -1,0 +1,110 @@
+Shifting
+========
+
+Parts Overview
+---------------
+If a pneumatic system is selected:
+
+- Pneumatic Cylinders
+- Pneumatic Solenoids
+- CO2 Tank and Pressure Regulator
+- Pneumatic Lines
+- Shift Drum
+- Gear Sensing
+
+If an electric system is selected:
+
+- Motor
+- Motor Mounting
+- Motor Gearboxes
+- Shift Drum
+- Gear Sensing
+
+Pneumatic System
+----------------
+Shift Delay
+^^^^^^^^^^^
+Shift Delay Goals:
+    Verify the shift delay duration of the current car using the i2Pro
+    software. Maintain the same shift delay as CR21, or lower delay
+    time as you see possible. The system on the CR21 has an approximate
+    shift delay of 40ms.
+
+Reliability
+^^^^^^^^^^^
+Reliability Goals:
+    The system must have a 99.9% shift to execution.
+
+Weight Reduction
+^^^^^^^^^^^^^^^^
+Weight Reduction Goals:
+    If electronic, weight should decrease more significantly, and we
+    would be able to remove the pneumatic lines and tank. Create a
+    comparison sheet between electronic and pneumatic to show why you
+    chose either one.
+
+Pneumatic Lines
+^^^^^^^^^^^^^^^
+Pneumatic Lines Goals:
+    All lines and fittings must be routed in SolidWorks. Lines can not
+    be within 1” of the engine casing or 3” of the exhaust. The bend
+    radius of the shifting lines is 4”. Full calculations giving reason
+    to air cylinder bore sizing as well as lines inner diameter must
+    be shown. Pneumatic cylinder sizing is one of the last areas that
+    show potential for significant improvement.
+    
+    Creating a test bench, along with some sort of mathematical
+    model(excel, matlab, Simulink)  might also lead to potential gains.
+
+Electronic Shifting
+-------------------
+Electronic shifting has many benefits if we’re able to get it to work properly.
+
+1.	Get rid of the need of a pneumatic system, including tank refills
+2.	No longer need to worry about lines bursting
+3.	More control over shifting force than just full on or full off
+4.	Can potentially introduce more sophisticated logic to handle dog-to-dog events, etc. Might be able to increase shift reliability.
+5.	Might be able to use PID control to shift more efficiently
+6.	Use of encoder on motor to determine if a shift was completed or not
+
+Noah messed around with an RS755, as well as a 64:1 gearbox. In
+addition, you could use a Vex Robotics Talon SRX motor controller,
+as it can be controlled over CAN. This would allow us to handle all
+of the logic using the MoTeC M150, instead of an external
+controller. This would require the use of M1 Build.
+
+A Test bench must be made before implementation on a car.
+
+A custom shift drum has the potential to lower the learning curve
+of new drivers as well as let the drives and the team reliably put
+the car in neutral. A custom shift drum also has the potential of
+increasing shift reliability by removing the need to pass through
+neutral on the 1-2 shift.
+
+Currently the shift pattern in 1-N-2-3-4-5-6. Investigate the
+possibility of moving neutral to the bottom. This would make the shift
+pattern N-1-2-3-4-5-6. If this is viable do not use aluminum. Auburn
+had one very notable example at Lincoln 2019 where their 7075 aluminum
+shift drum failed.
+
+A 3d scan of the current shift drum would need to be made for
+modification into a new pattern along with possible other changes. We
+have access to a 3d faro arm as well as potential access to one in the cube.
+
+Gear Sensing
+------------
+Currently we use the transmission speed sensor(output shaft angular
+velocity) and the engine speed sensor to calculate gear. Because of
+this if the vehicle is not moving, gear is unavailable to the driver.
+Look into the possibility of putting different resistors on the shift
+drum and using the neutral switch as a rotary potentiometer. This
+would allow the driver and team to see gear even when at a stop.
+
+
+
+
+
+
+
+
+

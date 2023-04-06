@@ -1,0 +1,35 @@
+Lighting
+========
+
+Lighting is a tricky thing to teach, as it is more artistic than scientific. There is no right or wrong way to do it, but some ways
+are definitely better than others.
+
+Back to Basics
+--------------
+To provide a foundation in lighting a scene in 3D art, we should probably start back at stage lighting. Because I started here, I know
+of no other point from which to start. However, almost all of the information for stage lighting is relevant here as well.
+
+Purpose of Lighting
+^^^^^^^^^^^^^^^^^^^
+
+.. image:: LightingImages/Triangle.png
+    :scale: 25%
+
+Angles of Lighting
+^^^^^^^^^^^^^^^^^^
+When attempting to light an actor on stage, the location of the light is critical to its purpose. For instance, if you put a light in
+front of the person, they will be lit(shocker, I know). But what happens when you put a light behind them? Suddenly, instead of creating
+a character on stage which is bright and welcoming, you have cast the actor in shadows and made them into a mysterious evil. Listed
+below are some of the most often used angles in lighting design to give a visual example of just how important the location of a light
+is, but this does not mean that they are the only ones you can use! Do what is best for the scene, and what portrays and enhances the
+acting in the most appropriate manner.
+
+.. image:: LightingImages/LightingAngles.jpg
+    :scale: 33%
+
+
+Controllable Properties
+^^^^^^^^^^^^^^^^^^^^^^^
+Lights, both in real life and in digital art can be controlled in many different ways. However, for our purposes we are most interested
+in the color of the light, the intensity of the light, and the sharpness of the light.
+

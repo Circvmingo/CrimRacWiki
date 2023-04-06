@@ -1,0 +1,4 @@
+Rendering
+=========
+
+Rendering a scene

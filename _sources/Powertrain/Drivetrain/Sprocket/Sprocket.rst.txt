@@ -1,0 +1,41 @@
+Sprocket
+========
+Sprocket Goals
+--------------
+    In order to reduce the movement away from concentricity due to
+    loading when a torque from the engine is applied to the
+    differential which would cause an increase in frictional losses,
+    the maximum deformation of the differential must be less than or
+    equal to .0125” from the center of the front sprocket at peak
+    loading. Show this with the use of  FEA. There is also a chance
+    that we will be able to attach strain gauges to the differential
+    carriers. This will be a good way to validate their design.
+
+.. image:: ../../all-ppt-images/sprocket1.png
+
+Sprocket FEA
+------------
+.. image:: ../../all-ppt-images/sprocket2.png
+
+Loadings: 
+    | Bearing loads along the teeth (left to right) 
+    | 1. 1246.13 lbf 
+    | 2. 987.82 lbf 
+    | 3. 482.71 lbf 
+    | 4. 142.54 lbf 
+    | 5. 25.99 lbf
+
+Fixed:
+    Washer bolt holes
+    Hinge along the flower petal insides 
+
+Yield: 
+    73 ksi
+
+Material: 
+    7075-T6 Aluminum 
+
+**Results**
+
+.. image:: ../../all-ppt-images/sprocket3.png
+.. image:: ../../all-ppt-images/sprocket4.png

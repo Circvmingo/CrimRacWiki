@@ -1,0 +1,67 @@
+Simulation Setup
+================
+
+.. _SimSetup:
+
+Simulation Setup is done within the "setup" item under the Simulation banner menu at the top.
+
+After opening the setup menu, you will be presented with four menu options, being General, Convergence, Solver Settings,
+and Defaults. The purpose of this page is to provide you with an explanation of each field in these menus, so that you
+may gain a greater understanding of how to select the options to best suit each simulation application.
+
+General
+-------
+.. image:: Setup-Images/general.png
+    :scale: 50%
+
+Name:
+    The name of the current solver you are going to make. The default name is Setup1.
+
+Maximum Number of Iterations:
+    This is the max. number of iterations that Fluent will solve. The default value is 100.
+
+Problem Types:
+    These are the problems which Icepak will attempt to solve for. For our case, we should leave
+    both options checked.
+
+Flow Regime:
+    This field determines which solver method the solution will use. Almost never assume laminar flow,
+    and instead select the Turbulent option. Then, go into the options menu and select whichever equation
+    is best suited for your application. My current understanding is that K-Omega SST will be most used for
+    our purposes.
+
+Radiation Model:
+    I am unsure of this setting as of now, and I need to do more research to suggest a selection for this option field.
+
+Include Gravity:
+    In the case of airflow, it may be best to leave this option unchecked. However, when fluids such as water, coolant, or oil
+    are introduced, it may be more reasonable to turn gravity on.
+
+Solve Flow and Energy Equations Sequentially:
+    I am unsure of this setting as of now, and I need to do more research to suggest a selection for this option field.
+
+Convergence
+-----------
+.. image:: Setup-Images/convergence.png
+    :scale: 50%
+
+I am unsure of this menu as of now, and I need to do more research to suggest a selection for these option fields.
+
+Solver Settings
+---------------
+.. image:: Setup-Images/solver-settings.png
+    :scale: 50%
+
+
+.. image:: Setup-Images/solver-settings-advanced.png
+    :scale: 50%
+
+
+I am unsure of this menu as of now, and I need to do more research to suggest a selection for these option fields.
+
+Defaults
+-----------
+.. image:: Setup-Images/defaults.png
+    :scale: 50%
+
+This page allows you to set default solver parameters to speed up your workflow in Icepak.

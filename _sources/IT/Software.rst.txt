@@ -1,0 +1,30 @@
+Software
+=========
+rekgueirhfkjle
+
+.. _ClustSoft:
+
+Cluster Nodes
+-------------
+soft clust
+
+
+.. _HostSoft:
+
+VM Host Machine
+-----------------
+soft host
+
+
+.. _VMSoft:
+
+VMs
+-----
+soft vm
+
+
+.. _NetSoft:
+
+Networking
+------------
+soft Net

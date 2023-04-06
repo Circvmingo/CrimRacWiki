@@ -1,0 +1,78 @@
+Modifiers
+=========
+Modifiers are applied on top of an existing mesh and change various aspects of the mesh, with the benefit of modifiers being a
+non-destructive form of modeling.
+
+Though there are quite a few modifiers available, only a few get used frequently. For this reason, this documentation will only cover
+those frequently used modifiers.
+
+
+
+Generation
+----------
+
+Array
+^^^^^
+The array modifier allows you to create a 2D array of the selected object. It allows you to choose between a set length, a curve to
+follow, or just simple offsets.
+
+Bevel
+^^^^^
+The bevel modifier allows you to non-destructively bevel the edges of objects.
+
+Boolean
+^^^^^^^
+The boolean modifier is best used through the blender addon "Bool-Tool", but the modifier enables non-destructive creation of holes in
+objects.
+
+Decimate
+^^^^^^^^
+The decimate modifier lets you control the mesh resolution. This is most often used if you have no need for a high resolution model,
+but the imported file is absolutely ridiculous.
+
+Mask
+^^^^
+
+
+Mirror
+^^^^^^
+
+
+Screw
+^^^^^
+
+
+Skin
+^^^^
+
+
+Solidify
+^^^^^^^^
+
+
+Subdivision Surface
+^^^^^^^^^^^^^^^^^^^
+
+
+
+Deformation
+-----------
+
+
+Curve
+^^^^^
+
+
+Displace
+^^^^^^^^
+
+
+Shrinkwrap
+^^^^^^^^^^
+
+
+
+Physics
+-------
+Particle System
+

@@ -1,0 +1,67 @@
+Primitives
+==========
+The primitives are what we call the building blocks of a model. They offer a starting point from which to build your model from, and
+each has its own pros and cons.
+
+.. note:: The primitives can be found by pressing Shift+A in the viewport, under Mesh.
+
+The Plane
+---------
+.. image:: Primitives/plane.png
+
+Good as a flat ground, or a wall. Needs to be heavily modified to be super interesting, but it definitely has its purposes in the
+creation process.
+
+The Cube
+--------
+.. image:: Primitives/cube.png
+
+Literally the best primitive there is. It's all quads, and 3D. This is the primitive I would reccomend using for just about everything.
+Just make sure to delete the default one, it's cursed. I don't make the rules, sorry.
+
+The Circle
+----------
+.. image:: Primitives/circle.png
+
+I rarely use the circle. It just makes a ring of points and then fills it in. I'm sure it has some very good uses, but I can't think of
+many.
+
+
+The UV Sphere
+-------------
+.. image:: Primitives/uv-sphere.png
+
+It's a sphere made mostly of squares, and is pretty nice all around. I don't use spheres super often, so I don't have a super strong
+opinion about these.
+
+The Ico-Sphere
+--------------
+.. image:: Primitives/ico-sphere.png
+
+I like using the Ico-sphere for non-sphere related activities, such as making dice with them or making crystals.
+
+The Cylinder
+------------
+.. image:: Primitives/cylinder.png
+The second best primitive behind the cube. I know it's not broken up nicely into quads, but I do use it frequently and often so it's
+hard to complain.
+
+The Cone
+--------
+.. image:: Primitives/cone.png
+
+I rarely use the cone. if I need a cone shaped object, I'll use the cylinder and deform it until it looks like a cone. The geometry
+of a cone often causes a lot of problems, especially when trying to bevel edges.
+
+
+The Torus
+---------
+.. image:: Primitives/torus.png
+
+The torus has very niche applications, but I'm very grateful for it when I run into one of those situations.
+
+The Monkey
+----------
+.. image:: Primitives/suzanne.png
+
+Her name is Suzanne and you will show her respect.

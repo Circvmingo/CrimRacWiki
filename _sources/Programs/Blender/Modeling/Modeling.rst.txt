@@ -1,0 +1,11 @@
+Modeling
+========
+Modeling is the act of creating a mesh using a combination of actual geometry as well as mesh modifiers, which all come together to
+make a larger model. Several of these models would then ideally come together to make a larger scene.
+
+.. toctree::
+    Primitives
+    Modifiers
+
+
+

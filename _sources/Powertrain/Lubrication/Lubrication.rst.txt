@@ -1,0 +1,98 @@
+Lubrication
+===========
+Goals for Lubrication:
+    | Minimize system weight and complexity
+    | Provide adequate lubrication performance
+    | Allow optimal engine placement
+
+Parts Overview
+--------------
+- Wet Sump
+- Oil Pan
+- Oil Pickup
+- Trap Door System
+- Windage Tray
+- Drain Plug / Thermistor Bung
+- Dry Sump
+- Oil Pan
+- Oil Lines
+- Oil de-aerator/reservoir
+- Oil Selection
+
+
+Gasket
+------
+| ● Dry gasket reduces service time and complexity
+| ● One-piece fiber reinforced Nitrile gasket eliminates need for sealant
+| ● Waterjetted for precision fitment and reproducibility
+
+Oil pan
+-------
+Oil Pan Goals:
+    Creates a proper seal, while maintaining light weight and ease of
+    manufacturing. Incorporate jigs into the manufacturing process in
+    order to meet designed tolerances.
+
+| ● 6061 Aluminum, formed and welded
+| ● Integrated baffle tray
+| ● Temperature sensor serves as drain plug
+| ● 0.86L volume, 1.56L system total
+| ● New, low profile design allows engine CG to be lowered by 1.6cm.
+
+Trap Door System
+----------------
+Trap Door Goals:
+    Investigate different designs for the trap door system that can make
+    the part easier to service. Talk to Eddie about the possibility of
+    developing a sloshing simulation of the oil pan. 
+
+Oil Pickup
+----------
+Oil Pickup Goals:
+    Design an oil pickup that effectively does its job and is easy to manufacture.
+
+| ● 6061 Aluminum
+| ● Easy to manufacture
+| ● Seals with OE pickup tube gasket
+| ● Optimized geometry to prevent oil starvation
+
+Baffle Tray
+-----------
+| ● Proven design prevents oil starvation during maximum cornering force
+| ● Triple Trap Door 
+| ● Retained by welded tabs
+
+Oil Selection
+-------------
+Oil Selection Goals:
+    Select an oil that will adequately protect the engine from wear.
+    Talk to Hunter about the possible Valvoline sponsorship and the
+    selections of oils they have to offer. 
+
+Mobil 1 4T 10W-40
+    | ● Cost efficient 
+    | ● Available locally
+    | ● Wet clutch specific additives 
+    | ● Meets Yamahas recommended oil specifications.
+    | ● Proven through oil analysis to withstand the harshest conditions our car can provide
+
+Oil Heat Load
+-------------
+Oil Heat Load Goals:
+    Use the engine dyno to characterize how much of a heat load the
+    engine puts on the lubrication system. In order to do this, it
+    will be possible to run the engine at peak horsepower for a
+    certain amount of time without the cooling system running and
+    determine the rate of oil temperature increase from data.
+    Obviously, we would not let the oil get past 130C, but we could
+    use this data to have a better understanding of the heat output
+    into the lubrication system and design for this worst-case scenario.
+    Then figure out how to mitigate this load by use of coatings or coolers. 
+
+
+
+
+
+
+
+    

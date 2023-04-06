@@ -1,0 +1,74 @@
+Mesh Generation
+===============
+
+.. _MeshGen:
+
+Mesh generation is done within the "Global Mesh Settings" item under the Simulation banner menu at the top.
+
+After opening the global mesh settings menu, you will be presented with three menu options, being General, Advanced,
+and Defaults. The purpose of this page is to provide you with an explanation of each field in these menus, so that you
+may gain a greater understanding of how to select the options to best suit each simulation application.
+
+Though I will explain the general mesh settings, they are laughably bad and when setting a simulation up, you should almost
+always use the advanced settings to your advantage.
+
+General
+-------
+.. image:: Mesh-Settings-Images/general.png
+    :scale: 50%
+
+Name:
+    This is where you can name the generated mesh, if you wish.
+
+Auto Mesh Setting:
+    As stated previously, this is an atrocious way of actually generating a mesh. if you have any idea at all of what you are doing,
+    **DO NOT USE THIS SETTING**. It is simply a slider ranging from a coarse to fine mesh, and gives you no real input over how the
+    mesh is actually generated.
+
+Facet Level:
+    I have no understanding of this slider as of now, but I will come back and document this at a later time.
+
+Advanced
+--------
+.. image:: Mesh-Settings-Images/advanced.png
+    :scale: 50%
+
+Maximum Element Size:
+    The maximum Element Size items allow you to define the largest an element can be in the X, Y, and Z directions.
+    I have never before researched if having a non-cubic max. element size has a benefit, so I will neither reccomend
+    nor advise against it.
+
+Minimum Gap:
+    My understanding of this setting is that this is where you define the minimum gap on your model. However, I am unsure
+    of if that is at all correct.
+
+Mesh Parameters
+^^^^^^^^^^^^^^^
+Min. elements in gap:
+    This allows you to control the minimum number of elements which it takes to span any given gap in your model.
+    As a rule of thumb, this number should be at least 3 to account for the boundary layer present on surfaces.
+    By increasing this value, you increase the amount of elements in your mesh, but you also gain accuracy in your solution.
+
+Min. elements on edge:
+    this value allows you to change the minimum elements it takes to create an edge. This is mostly up to the geometry of your
+    model, but I suggest at minimum 2, and probably closer to 3 or more.
+
+Max size ratio:
+    I am unsure of this setting at the current time, but I will come back and document this in the future.
+
+No O-Grids:
+    I am unsure of this setting at the current time, but I will come back and document this in the future.
+
+Allow stair-stepped meshing:
+    This option enables and disables the ability for the mesher to create a stair-stepped mesh. My understanding of this is that,
+    in extreme cases, your mesh can look like it was built from voxels, like in Minecraft.
+
+Multi level meshing
+    I am unsure of these settings at the current time, but I will come back and document this in the future.
+
+Defaults
+-----------
+.. image:: Setup-Images/defaults.png
+    :scale: 50%
+
+This page allows you to set default solver parameters to speed up your workflow in Icepak.

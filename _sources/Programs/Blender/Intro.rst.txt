@@ -1,0 +1,39 @@
+Intro to Polygon-Based Modeling
+===============================
+
+As stated on the main page, Blender is a polygon-based modeling software. It doesn't need to be as precise as Solidworks or Fusion 360,
+because it doesn't have to be. That's not its purpose. Instead of defining everything by functions and operations, an object is made up
+of vertices, lines, and faces. 2 vertices make up a line, 3 or more lines make up a face, and 4 or more faces make a closed object.
+These three things are the building blocks of the building blocks, and it is essential to understand how they like to behave so that you
+can build models in a correct manner.
+
+
+Connecting the three together
+-----------------------------
+Though you are able to build models in pretty much any way you see fit, there are a few generally accepted guidelines regarding how a
+bunch of vertices should be connected together.
+
+`This website <https://artisticrender.com/triangles-vs-quads-in-blender/#:~:text=When%20we%20say%20tris%20in,block%20of%20any%203D%20mesh.>`_
+explains this topic much better, and goes more in depth into the reasoning for everything.
+
+Quads
+^^^^^
+Making a model through the use of quads is the best way of modeling, bar none. In this method, 4 vertices are connected by 4 edges,
+making 1 face. By taking the time to model using this method, you will almost always save time later down the road when performing more
+complex operations on your mesh. Additionally, your mesh will be easier to work with and look at, even in the early stages of modeling.
+However, there are cases in which a quad can't quite do its job right. That's where triangles come in.
+
+Tris
+^^^^
+One method of joining things together nicely is through tris, or triangles. In this layout, three vertices are connected by three edges.
+No more, No less. They're great for when a mesh might be too complex for to be made from quads, or when you need just a little more
+detail in a specific spot. However, these should be avoided at almost all other instances. I will be the first to admit that this is
+very difficult to do, but with the amount of headaches I have caused myself due to poor modeling technique, it really is worth it in the
+end to do things the right way.
+
+N-Gons and Poles
+^^^^^^^^^^^^^^^^
+Both N-gons and poles should be avoided at almost all opportunities. An N-Gon is a face with more than 4 edges, and a pole is a vertex
+with more than 4 connected edges. These are both best avoided for the same reasons as triangles, and can cause serious issues later down
+the line when texturing or editing models.
+

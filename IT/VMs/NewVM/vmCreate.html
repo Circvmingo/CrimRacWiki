@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creating a VM &mdash; Crimson Racing Wiki 1.0 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/version_switch.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Setting Up a VM" href="vmSetup.html" />
+    <link rel="prev" title="Windows VMs" href="../Windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Crimson Racing Wiki
+              <img src="../../../_static/CR-LogoFull-White.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Subteams</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../Aerodynamics/Aerodynamics.html">Aerodynamics</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Chassis/Chassis.html">Chassis</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Electrical/Electrical.html">Electrical</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../EV/EV.html">EV</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Manufacturing/Manufacturing.html">Manufacturing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Manufacturing/3D%20Printing.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html">CNC Machining</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#cnc-shop-tour">CNC Shop Tour</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#safety">Safety</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#introduction-to-cnc-mill-tooling">Introduction to CNC Mill Tooling</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#endmill">Endmill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#drill">Drill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#reamer">Reamer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#spot-center-drill">Spot/Center Drill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#face-mill">Face Mill</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#edge-finder">Edge Finder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#vps-probe">VPS Probe</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#axis-of-movement">Axis of Movement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#feeds-and-speeds">Feeds and Speeds</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#workholding">Workholding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#cnc-vise">CNC Vise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#toe-clamps">Toe Clamps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#custom-fixtures">Custom Fixtures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#soft-jaws">Soft Jaws</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#wrapping-up">Wrapping Up</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#vise-and-parallel-set-up">Vise and Parallel Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#deburring">Deburring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#toe-clamp-set-up">Toe Clamp Set-Up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#manual-tool-and-work-offsets">Manual Tool and Work Offsets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#automatic-tool-and-work-offsets">Automatic Tool and Work Offsets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#running-the-mill">Running the Mill</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#introduction-to-cam">Introduction to CAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#titan-building-block-1">Titan Building Block 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#titan-building-block-2">Titan Building Block 2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Machining.html#crimson-racing-part-based-on-current-state-of-manufacturing">Crimson Racing Part (based on current state of manufacturing)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html">CNC Lathe Work</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#face-off-stock">Face off Stock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#tool-offset">Tool Offset</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#zeroing-tool-in-z-axis">Zeroing tool in Z axis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#zeroing-tool-in-x-axis">Zeroing tool in x axis</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#work-offset-tells-machine-where-front-face-of-stock-is">Work Offset (tells machine where front face of stock is)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#square-off-parting-tool">Square Off Parting Tool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#cam-upload">CAM Upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#drilling">Drilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Manufacturing/CNC%20Lathe%20Work.html#manual-adjustment-of-tool-offset">Manual Adjustment of Tool Offset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Powertrain/Powertrain.html">Powertrain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html">Intake</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#manufacturing-servicing">Manufacturing/Servicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#components">Components</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#air-filter">Air Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#throttle-body">Throttle Body</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#restrictor">Restrictor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#plenum">Plenum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Intake/Intake.html#runners">Runners</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html">Exhaust</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#primary-runners">Primary Runners</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#goals-for-primaries">Goals for Primaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#pressure-wave-tuning">Pressure Wave Tuning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#effective-cam-duration">Effective Cam Duration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#primary-geometry">Primary Geometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#mounting-solution">Mounting Solution</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#collector">Collector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#welded-vs-slipfit-collector">Welded vs. Slipfit Collector</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#secondary-runners">Secondary Runners</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#secondary-runner-theory">Secondary Runner theory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#secondary-runner-design">Secondary Runner Design</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#muffler">Muffler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#goals-for-muffler">Goals for Muffler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#muffler-theory">Muffler Theory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Exhaust/Exhaust.html#muffler-design">Muffler Design</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html">Lubrication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#gasket">Gasket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#oil-pan">Oil pan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#trap-door-system">Trap Door System</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#oil-pickup">Oil Pickup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#baffle-tray">Baffle Tray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#oil-selection">Oil Selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Lubrication/Lubrication.html#oil-heat-load">Oil Heat Load</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html">Fuel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#fuel-cell">Fuel Cell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#fuel-filler-neck">Fuel Filler Neck</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#plumbing">Plumbing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#fuel-rail">Fuel Rail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Fuel/Fuel.html#injectors">Injectors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html">Shifting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#parts-overview">Parts Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#pneumatic-system">Pneumatic System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#shift-delay">Shift Delay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#reliability">Reliability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#weight-reduction">Weight Reduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#pneumatic-lines">Pneumatic Lines</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#electronic-shifting">Electronic Shifting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Shifting/Shifting.html#gear-sensing">Gear Sensing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Drivetrain/Drivetrain.html">Drivetrain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Drivetrain/Drivetrain.html#parts-overview">Parts Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Drivetrain/Differential/Differential.html">Differential</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Drivetrain/Differential/Diff%20Carriers.html">Carriers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Drivetrain/Sprocket/Sprocket.html">Sprocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Powertrain/Drivetrain/Drivetrain.html">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Drivetrain/Drivetrain.html#bearings">Bearings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Drivetrain/Drivetrain.html#gearing">Gearing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Powertrain/Cooling/Cooling.html">Cooling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Powertrain/Cooling/Cooling.html#part-overview">Part Overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Suspension/Suspension.html">Suspension</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Suspension/Brakes/Brakes.html">Brakes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Suspension/Geometry/Geometry.html">Geometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Suspension/Structures/Structures.html">Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../IT.html">IT</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../Overview.html">Overview</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../Overview.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Overview.html#networking">Networking</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../Overview.html#vms">VMs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Licensing.html">Licensing Server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../OMV.html">Open Media Vault</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Windows.html">Windows VMs</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Creating a VM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vmSetup.html">Setting Up a VM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Overview.html#vm-host-machine">VM Host Machine</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Hardware.html">Hardware</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Hardware.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Hardware.html#vm-host-machine">VM Host Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Hardware.html#vms">VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Hardware.html#networking">Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Software.html">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Software.html#cluster-nodes">Cluster Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Software.html#vm-host-machine">VM Host Machine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Software.html#vms">VMs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Software.html#networking">Networking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../DirMan.html">Active Directory Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../LinuxDocs.html">Basic Linux Reference Docs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../LinuxDocs.html#debian">Debian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../LinuxDocs.html#centos">CentOS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Programs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Ansys%20Fluent/Ansys%20Fluent.html">Ansys Fluent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Ansys%20Icepak.html">Ansys Icepak</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Ansys%20Icepak.html#contents">Contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Initial%20Thoughts.html">Initial Thoughts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Initial%20Thoughts.html#main-interface">Main Interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Initial%20Thoughts.html#upsides">Upsides</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Initial%20Thoughts.html#random-notes">Random Notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html">Top Menus</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#desktop">Desktop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#view">View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#draw">Draw</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#model">Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#simulation">Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#results">Results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#automation">Automation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Top%20Menus.html#minerva">Minerva</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Mesh%20Generation.html">Mesh Generation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Mesh%20Generation.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Mesh%20Generation.html#advanced">Advanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Mesh%20Generation.html#defaults">Defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Simulation%20Setup.html">Simulation Setup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Simulation%20Setup.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Simulation%20Setup.html#convergence">Convergence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Simulation%20Setup.html#solver-settings">Solver Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Simulation%20Setup.html#defaults">Defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Post%20Processing.html">Post Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Parameterization.html">Parameterization</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Parameterization.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Parameterization.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Parameterization.html#linking-variables-to-the-model">Linking Variables to the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Ansys%20Icepak/Parameterization.html#running-the-simulations">Running the Simulations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Ansys%20Mechanical/Ansys%20Mechanical.html">Ansys Mechanical</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Blender/Blender.html">Blender</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Intro.html">Intro to Polygon-Based Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Intro.html#connecting-the-three-together">Connecting the three together</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Intro.html#quads">Quads</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Intro.html#tris">Tris</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Intro.html#n-gons-and-poles">N-Gons and Poles</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Modeling/Modeling.html">Modeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html">Primitives</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-plane">The Plane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-cube">The Cube</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-circle">The Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-uv-sphere">The UV Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-ico-sphere">The Ico-Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-cylinder">The Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-cone">The Cone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-torus">The Torus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Primitives.html#the-monkey">The Monkey</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Modeling/Modifiers.html">Modifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Modifiers.html#generation">Generation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Modifiers.html#deformation">Deformation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Modeling/Modifiers.html#physics">Physics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html">Shading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#input">Input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#output">Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#shader">Shader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#texture">Texture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#color">Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#vector">Vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Shading/Shading.html#converter">Converter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Lighting/Lighting.html">Lighting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../Programs/Blender/Lighting/Lighting.html#back-to-basics">Back to Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Lighting/Lighting.html#purpose-of-lighting">Purpose of Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Lighting/Lighting.html#angles-of-lighting">Angles of Lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../Programs/Blender/Lighting/Lighting.html#controllable-properties">Controllable Properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../Programs/Blender/Rendering/Rendering.html">Rendering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Excel/Excel.html">Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Fusion%20360/Fusion%20360.html">Fusion 360</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/GT%20Suite/GT%20Suite.html">GT Suite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Hyperworks/Hyperworks.html">Hyperworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Lotus%20Shark/Lotus%20Shark.html">Lotus Shark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/M1%20Tune/M1%20Tune.html">M1 Tune</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Matlab/Matlab.html">Matlab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Motec%20i2%20Pro/Motec%20i2%20Pro.html">Motec i2 Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Solidworks/Solidworks.html">Solidworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Programs/Win%20Geo/Win%20Geo.html">Win Geo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Crimson Racing Wiki</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../IT.html">IT</a></li>
+          <li class="breadcrumb-item"><a href="../../Overview.html">Overview</a></li>
+      <li class="breadcrumb-item active">Creating a VM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/IT/VMs/NewVM/vmCreate.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="creating-a-vm">
+<span id="vmcreate"></span><h1>Creating a VM<a class="headerlink" href="#creating-a-vm" title="Permalink to this heading"></a></h1>
+<p>This is a guide on how to create a VM from scratch in ProxMox. The goal of this page is to walk you through each step of the process,
+and to tell you what each change made to the default settings does.</p>
+<section id="step-1-create-a-new-vm">
+<h2>Step 1: Create a New VM<a class="headerlink" href="#step-1-create-a-new-vm" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/img1.png"><img alt="../../../_images/img1.png" src="../../../_images/img1.png" style="width: 386.0px; height: 817.5px;" /></a>
+<p>In the top right, under the Datacenter dropdown, right click on CrimsonRacingServer, and select the item labeled <em>Create VM</em>.</p>
+</section>
+<section id="step-2-general-settings">
+<h2>Step 2: General Settings<a class="headerlink" href="#step-2-general-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/general2.png"><img alt="../../../_images/general2.png" src="../../../_images/general2.png" style="width: 897.5px; height: 633.5px;" /></a>
+<p>Here is where you set the general settings for the VM.</p>
+<section id="node">
+<h3>Node<a class="headerlink" href="#node" title="Permalink to this heading"></a></h3>
+<p>Leave the node as CrimsonRacingServer. Unless large-scale expansion occurs, this is the only node we will have.</p>
+</section>
+<section id="vm-id">
+<h3>VM ID<a class="headerlink" href="#vm-id" title="Permalink to this heading"></a></h3>
+<p>The VM ID is how ProxMox identifies the VM. Services such as the licensing server and the domain controller should have an ID that falls
+between 110 and 119. User VMs such as the Windows VM should have an ID that falls in between 120 and 129.</p>
+</section>
+<section id="name">
+<h3>Name<a class="headerlink" href="#name" title="Permalink to this heading"></a></h3>
+<p>Here is where you give a name for your VM. Do not include spaces or special characters, and generally use camel case as a naming
+convention. (ex. SampleName)</p>
+</section>
+<section id="resource-pool">
+<h3>Resource Pool<a class="headerlink" href="#resource-pool" title="Permalink to this heading"></a></h3>
+<p>At the current time we do not have a designated resource pool, however in the future this is where you would assign a VM to a specific
+one.</p>
+</section>
+</section>
+<section id="step-3-os-settings">
+<h2>Step 3: OS Settings<a class="headerlink" href="#step-3-os-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/OS.png"><img alt="../../../_images/OS.png" src="../../../_images/OS.png" style="width: 901.0px; height: 640.0px;" /></a>
+<p>This is where you designate what operating system your VM will run on.</p>
+<section id="storage">
+<h3>Storage<a class="headerlink" href="#storage" title="Permalink to this heading"></a></h3>
+<p>Under this dropdown, you can select which media storage device you want to pull an iso image from. For now, leave this as local.</p>
+</section>
+<section id="iso-image">
+<h3>Iso Image<a class="headerlink" href="#iso-image" title="Permalink to this heading"></a></h3>
+<p>This is where you choose which Iso image you want to use for your VM. Which image you choose will depend on what the purpose of
+the VM is.</p>
+</section>
+<section id="guest-os">
+<h3>Guest OS<a class="headerlink" href="#guest-os" title="Permalink to this heading"></a></h3>
+<p>This dictates what kernel type the VM will run. If you are running anything but a Windows VM, set the type to <em>Linux</em> and the version
+to <em>5.x - 2.6 Kernel</em>.</p>
+</section>
+</section>
+<section id="step-4-system-settings">
+<h2>Step 4: System Settings<a class="headerlink" href="#step-4-system-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/system.png"><img alt="../../../_images/system.png" src="../../../_images/system.png" style="width: 900.0px; height: 637.5px;" /></a>
+<p>This is where you define what system the VM will operate on, as well as what BIOS architecture the VM will use.</p>
+<section id="graphic-card">
+<h3>Graphic Card<a class="headerlink" href="#graphic-card" title="Permalink to this heading"></a></h3>
+<p>You can either leave this option to default, however I prefer to set this to SPICE, as it is an easier system to interact with.</p>
+</section>
+<section id="machine">
+<h3>Machine<a class="headerlink" href="#machine" title="Permalink to this heading"></a></h3>
+<p>Change this setting to q35.</p>
+</section>
+<section id="bios">
+<h3>BIOS<a class="headerlink" href="#bios" title="Permalink to this heading"></a></h3>
+<p>Set this setting to OVMF(UEFI).</p>
+</section>
+<section id="efi-storage">
+<h3>EFI Storage<a class="headerlink" href="#efi-storage" title="Permalink to this heading"></a></h3>
+<p>Set this to the VM disk</p>
+</section>
+<section id="qemu-agent">
+<h3>Qemu Agent<a class="headerlink" href="#qemu-agent" title="Permalink to this heading"></a></h3>
+<p>Enable this setting. This helps the Proxmox Machine and the VM to communicate.</p>
+</section>
+</section>
+<section id="step-5-disk-settings">
+<h2>Step 5: Disk Settings<a class="headerlink" href="#step-5-disk-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/disks.png"><img alt="../../../_images/disks.png" src="../../../_images/disks.png" style="width: 897.5px; height: 635.0px;" /></a>
+<p>This is where you allocate disk space for your VM.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This only covers the <em>Disk</em> portion of the Disks settings page. There is a <em>Bandwidth</em> section, however at the current point in time
+there is no use for our team to utilize these settings.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Proxmox allows you to create multiple storage volumes for a single VM. However, at the current point in time there is no real need to
+do so.</p>
+</div>
+<section id="bus-device">
+<h3>Bus/Device<a class="headerlink" href="#bus-device" title="Permalink to this heading"></a></h3>
+<p>Leave this set to SCSI, and leave the device set to 0</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you change this to anything else, certain programs such as Solidworks will refuse to launch, as it recognizes that the VM is
+a vm as opposed to a bare metal system, such as your laptop.</p>
+</div>
+</section>
+<section id="id1">
+<h3>Storage<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>Leave this set to <em>VMs</em>. This setting determines where the VMs drive will be created.</p>
+</section>
+<section id="disk-size">
+<h3>Disk Size<a class="headerlink" href="#disk-size" title="Permalink to this heading"></a></h3>
+<p>Setting disk size is a nice guessing game. It is much easier to add to the disk size than to take away, so I suggest starting small.</p>
+<p>A good base value would probably be around 10gb.</p>
+</section>
+<section id="cache">
+<h3>Cache<a class="headerlink" href="#cache" title="Permalink to this heading"></a></h3>
+<p>leave the cache type set to Default(No Cache).</p>
+</section>
+</section>
+<section id="step-6-cpu-settings">
+<h2>Step 6: CPU Settings<a class="headerlink" href="#step-6-cpu-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/cpu.png"><img alt="../../../_images/cpu.png" src="../../../_images/cpu.png" style="width: 895.0px; height: 632.5px;" /></a>
+<p>This is where you allocate the amount of CPU cores which this VM can take advantage of. Generally, the best amount of cores is the
+fewest amount of cores, since the server has a finite amount of resources.</p>
+<section id="sockets">
+<h3>Sockets<a class="headerlink" href="#sockets" title="Permalink to this heading"></a></h3>
+<p>Leave set to 1.</p>
+</section>
+<section id="cores">
+<h3>Cores<a class="headerlink" href="#cores" title="Permalink to this heading"></a></h3>
+<p>This is where you allocate the number of cores. A good starting value is 4. However, if you know that the VM you are creating will need
+more computing power, feel free to increase that number.</p>
+</section>
+<section id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this heading"></a></h3>
+<p>This is where you set the type of CPU core you are using. Change the type from <em>Default (kvm64)</em> to <em>host</em>. To do this, either type in
+the word host into the search bar, or scroll all the way down to the bottom, and select the host option.</p>
+</section>
+</section>
+<section id="step-7-memory-settings">
+<h2>Step 7: Memory Settings<a class="headerlink" href="#step-7-memory-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/memory.png"><img alt="../../../_images/memory.png" src="../../../_images/memory.png" style="width: 897.5px; height: 638.5px;" /></a>
+<p>This is where the total memory allocated to this VM is set. Luckily for us, Proxmox will dynamically allocate memory to VMs. This means
+that if a VM is set to have 10gb of RAM but only needs 5gb, Proxmox will free up the other 5gb and give them to another VM which needs
+those resources. However, it is still good practice to set an appropriate amount of memory for a VM to prevent overcrowding of the
+server’s resources.</p>
+<section id="memory-mib">
+<h3>Memory (MiB)<a class="headerlink" href="#memory-mib" title="Permalink to this heading"></a></h3>
+<p>Input the value of the VMs allotted memory here, in megabytes. Remember, 1gb = 1024mb.</p>
+<p>A good starter value is 2gb, or 2048mb.</p>
+</section>
+</section>
+<section id="step-8-network-settings">
+<h2>Step 8: Network Settings<a class="headerlink" href="#step-8-network-settings" title="Permalink to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/network.png"><img alt="../../../_images/network.png" src="../../../_images/network.png" style="width: 901.0px; height: 636.0px;" /></a>
+<section id="bridge">
+<h3>Bridge<a class="headerlink" href="#bridge" title="Permalink to this heading"></a></h3>
+<p>Set to vmbr0</p>
+</section>
+<section id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this heading"></a></h3>
+<p>Set to VirtIO (paravirtualized)</p>
+</section>
+<section id="vlan-tag">
+<h3>VLAN Tag<a class="headerlink" href="#vlan-tag" title="Permalink to this heading"></a></h3>
+<p>Leave as no VLAN</p>
+</section>
+<section id="mac-address">
+<h3>MAC Address<a class="headerlink" href="#mac-address" title="Permalink to this heading"></a></h3>
+<p>Leave as auto, unless it is required that the VM has a specific MAC address</p>
+</section>
+<section id="firewall">
+<h3>Firewall<a class="headerlink" href="#firewall" title="Permalink to this heading"></a></h3>
+<p>This is optional, as all of this is hidden behind UAs firewall. Most of the time we disable this setting.</p>
+</section>
+</section>
+<section id="step-9-finishing-up">
+<h2>Step 9: Finishing Up<a class="headerlink" href="#step-9-finishing-up" title="Permalink to this heading"></a></h2>
+<p>Now that you have gone through and set everything to be the correct settings, go to the final confirm menu and click <em>finish</em> in the
+bottom right corner. Don’t be too worried if any of this got messed up, as most of it can be edited later, after the machine has been
+created.</p>
+<a class="reference internal image-reference" href="../../../_images/startup.png"><img alt="../../../_images/startup.png" src="../../../_images/startup.png" style="width: 1920.0px; height: 817.5px;" /></a>
+<p>Wait for it to finish being created, and then select your new VM in the dropdown menu under Datacenter-&gt;CrimsonRacingServer.</p>
+<p>Select the <em>console</em> tab in the page, and then click on the big <em>Start Now</em> button in the middle of the screen to start your new VM.</p>
+<p><strong>Congratulations</strong>! you have now fully created and started a new VM from scratch on the team server. The next page in this wiki will
+show you a couple of setup procedures depending on the OS you chose and what the purpose for the VM is.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Windows.html" class="btn btn-neutral float-left" title="Windows VMs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vmSetup.html" class="btn btn-neutral float-right" title="Setting Up a VM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Crimson Racing.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

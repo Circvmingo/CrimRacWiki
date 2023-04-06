@@ -1,0 +1,63 @@
+Blender
+=======
+
+Blender is a polygon-based modeling software which can be used to create anything from massive photorealistic landscapes to small,
+low-poly baskets, and everything in between. The main advantage that Blender has over Solidworks is that Blender has the ability to
+render images *really* well. The drawback of Blender, though, is that the whole software is based around polygons. This means that
+if you want a circle, you're kind of SOL. Of course, you can always approximate to the best of your ability, but it will never be
+perfect. Additionally, the more geometry you put into a file, the worse the performance of the file will be. At the end of the day,
+it's all a trade off.
+
+I started learning Blender at the beginning of the pandemic some time around March 2020, on my school computer because I was bored and
+had nothing better to do, I guess. I've always had a love for making things, and a software like Blender meant that I could create
+anything that came to my head, without cost or fear of not having the right tools. The only issue was that I had ZERO idea what I was
+doing, meaning I needed a tutorial. Because I'm a sentimental idiot, I'm going to link the tutorial that I learned from initially, way
+back when. Of course, Blender has changed **A LOT** since BlenderGuru released that tutorial. Features were added, render engines were
+optimized, techniques changed and got more efficient. With all of that said though, the fundimentals taught in the series of videos
+still hold true.
+
+https://www.youtube.com/watch?v=NyJWoyVx_XI&list=PLjEaoINr3zgEq0u2MzVgAaHEBt--xLB6U
+
+Below I have attached several renders of mine I have made throughout the years. This is not to discourage you, but instead encourage you
+and show how linearly your improvement can be if you just stick with it a little bit.
+
+
+.. image:: DemoImages/FirstRender.png
+
+Donut tutorial!!
+
+.. image:: DemoImages/SecondRender.png
+
+This is my second render. Regressing at first is okay!
+
+.. image:: DemoImages/ThreeDaysLater.png
+
+Only 3 days later, I made this. Still proud of it today.
+
+.. image:: DemoImages/MyDesk.png
+
+Eventually, I began making renders of everything in my house. Here's my desk.
+
+.. image:: DemoImages/LowPolyHard.png
+
+Low poly art is hard. I still to this day struggle with it.
+
+.. image:: DemoImages/AfterBlock.png
+
+For a while, I had severe creativity block. This is the first render I made after that hit. It's okay to take breaks!
+
+.. image:: DemoImages/OneYear.png
+
+One Year after it all started!! After this I really took off with Blender, and now the sky is the limit pretty much. I still
+get humbled frequently, but I'd like to think my most recent works are pretty high quality.
+
+.. toctree::
+    :maxdepth: 2
+
+    Installation
+    Intro to Polygon-Based Modeling <Intro>
+    Modeling/Modeling
+    Shading/Shading
+    Lighting/Lighting
+    Rendering/Rendering
+

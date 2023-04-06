@@ -1,0 +1,31 @@
+Ansys Icepak
+=============
+
+This is mostly a wild rambling of my thoughts as
+I navigate ANSYS ICEPAK, loosely disguised as documentation.
+
+
+.. note::
+
+   This project is under active development.
+
+   Also I'm bad at documentation.
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   Initial Thoughts
+   Top Menus
+   Mesh Generation
+   Simulation Setup
+   Post Processing
+   Parameterization
+
+   
+   
+   
+
+

@@ -1,0 +1,130 @@
+Shading
+=======
+
+Shading, or texturing, is very difficult to do well. That is why most people steal textures off of the internet. However, my goal is to
+at least explain how to go about creating your own textures, because that alone is an extremely valuable skill.
+
+
+Input
+-----
+Ambient Occlusion
+Attribute Node
+Bevel Node
+Camera Data Node
+Fresnel Node
+Geometry Node
+Curves Info Node
+Layer Weight Node
+Light Path Node
+Object Info Node
+Particle Info Node
+Point Info
+RGB Node
+Tangent Node
+Texture Coordinate Node
+UV Map Node
+Value Node
+Color Attribute Node
+Volume Info Node
+Wireframe Node
+
+Output
+------
+AOV Output Node
+Material Node
+Light Node
+World Node
+
+
+Shader
+------
+Add Shader
+Anisotropic BSDF
+Background
+Diffuse BSDF
+Emission
+Glass BSDF
+Glossy BSDF
+Hair BSDF
+Holdout
+Mix Shader
+Principled BSDF
+Principled Hair BSDF
+Principled Volume
+Refraction BSDF
+Specular BSDF
+Subsurface Scattering
+Toon BSDF
+Translucent BSDF
+Transparent BSDF
+Velvet BSDF
+Volume Absorption
+Volume Scatter
+
+
+Texture
+--------
+Brick Texture Node
+Checker Texture Node
+Environment Texture Node
+Gradient Texture Node
+IES Texture Node
+Image Texture Node
+Magic Texture Node
+Musgrave Texture Node
+Noise Texture Node
+Point Density Node
+Sky Texture Node
+Voronoi Texture Node
+Wave Texture Node
+White Noise Texture Node
+
+
+Color
+-----
+Bright/Contrast Node
+Gamma Node
+Hue Saturation Value Node
+Invert Node
+Light Falloff Node
+Mix Node
+RGB Curves Node
+
+
+Vector
+------
+Bump Node
+Displacement Node
+Mapping Node
+Normal Node
+Normal Map Node
+Vector Curves Node
+Vector Displacement Node
+Vector Rotate Node
+Vector Transform Node
+
+
+Converter
+---------
+Blackbody Node
+Clamp Node
+Color Ramp Node
+Combine Color Node
+Combine XYZ Node
+Float Curve
+Map Range Node
+Math Node
+Mix Node
+RGB to BW Node
+Separate Color Node
+Separate XYZ Node
+Shader To RGB
+Vector Math Node
+Wavelength Node
+
+
+
+
+
+
+

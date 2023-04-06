@@ -1,0 +1,55 @@
+Differential
+============
+
+Goals for Differential
+----------------------
+
+Spool vs. Drexler
+^^^^^^^^^^^^^^^^^
+Look at laptimes and corner exit speeds of the open diff, and the
+Drexler with various levels of preload, at fully locked levels of
+preload is the car noticeably slower? If not look at potential
+costs of keeping a spool and the effect in team workload
+associated with it. Once you have a design, be sure to validate it
+using FEA.
+
+CV Joints
+^^^^^^^^^
+One of the areas where we can see a potential decrease in rotating
+mass is the CV Joints. Noah wrote a code for it last year. Get the
+code from him and see if any reductions can be made based on this
+code. If reductions can be made a wire edm sponsorship will need
+to be found.
+
+Weight
+^^^^^^
+Further analysis into the loading and fatigue effects on this system
+are needed before weight reduction goals can be set. Instead aim for
+no weight increases.
+
+
+Spool
+-----
+.. image:: ../../all-ppt-images/spool1.png
+
+Loadings: 
+    8533 lbf torque on the flower petal design coming from chain loadings
+
+Fixed: 
+    Bearing supports on both bearing surfaces for carriers 
+
+Yield: 
+    73ksi 
+
+Material: 
+    7075-T6 Aluminum
+
+**Results**
+
+.. image:: ../../all-ppt-images/spool2.png
+
+Drexler
+-------
+.. image:: ../../all-ppt-images/drexler1.png
+.. image:: ../../all-ppt-images/drexler2.png
+    

@@ -1,0 +1,92 @@
+Top Menus
+=========
+
+.. _Top Menus:
+
+This is a general overview of the menus located directly above the
+model viewport. All of the subsections will be covered in later documentation.
+
+Desktop
+-------
+
+General file options, like New, Open, Save, etc. are all located up
+here, as well as the options to add new ICEPAK designs. Nothing too
+interesting.
+
+View
+----
+
+Really uninteresting, nothing notable, etc.
+
+Draw
+----
+
+This is where the real settings begin. This is where all of the modeling
+settings are located for creating sketches, volumes, etc. Ideally, all of
+this would be done in an external modeling software, however this will do
+in a pinch.
+
+Model
+-----
+
+Here, you can connect to spaceclaim to accelerate your design workflow, or
+import/export geometry to and from Icepak.
+
+Simulation
+----------
+
+This subsection of menu is a combination of ANSYS Mesher and Fluent, and is
+most likely where 99% of headaches are caused. These settings will be covered
+more in depth in later sections, however each menu item will get a brief intro
+here.
+
+:ref:`Setup <SimSetup>`:
+    This is where you define your solver settings, convergence params, and model types.
+
+:ref:`Global Mesh Settings <MeshGen>`:
+    Here is where you set all of the mesh generation parameters. You can always take the
+    auto-generation route, but I suggest going over to the advanced tab and messing things up yourself.
+
+Generate Mesh:
+    This generates the mesh and allows you to view it. It has a built-in section
+    view option, but I find it very difficult to use.
+
+Mesh Viewer:
+    View mesh.
+
+Optimetrics:
+    This section allows you to :ref:`parameterize <Parameterization>` your design,
+    allowing you to optimize the system for optimal cooling and airflow.
+
+Validate:
+    This option checks over the entire project and makes sure that everything which
+    needs to be there is present, and checks to make sure nothing is corrupted.
+
+Analyze All:
+    This is the equivalent to the Run Calculation button in Fluent. This is what
+    makes your computer cry out for help, and what warms up the office by 5 degrees.
+
+HPC Options:
+    Options for the server settings, unsure of how this is setup currently.
+
+Scheduler, Submit, and Monitor:
+    All regarding to server CFD submissions. Again, not entirely sure what this does.
+
+
+Results
+-------
+
+This is where you can set and get output variables, graphs, residual plots, and more.
+
+Again, all of this will hopefully be covered in a later section.
+
+Automation
+----------
+
+I don't know and I'm too scared of it right now
+
+Minerva
+-------
+
+My current understanding of Ansys Minerva is that it is the equivalent to Git for Ansys products.
+For the purposes of this team, I doubt we will ever find a need for this service.

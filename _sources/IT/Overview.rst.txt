@@ -1,0 +1,65 @@
+
+Overview
+=========
+Brief intro of all different computers/VMs
+
+
+
+.. _ClustOver:
+
+Cluster Nodes
+--------------
+Cluster Nodes definitions and stuff
+
+
+:ref:`Cluster Hardware <ClustHard>`
+
+:ref:`Cluster Software <ClustSoft>`
+
+
+
+.. _NetOver:
+
+Networking
+------------
+wljfnweknfwel
+
+:ref:`Networking Hardware <NetHard>`
+
+:ref:`Networking Software <NetSoft>`
+
+
+
+.. _VMOver:
+
+VMs
+----
+elfknwefonwl
+
+.. toctree::
+    :maxdepth: 1
+    :caption: VMs
+
+    Licensing Server <VMs/Licensing>
+    Open Media Vault <VMs/OMV>
+    Windows VMs <VMs/Windows>
+    Creating a VM <VMs/NewVM/vmCreate>
+    Setting Up a VM <VMs/NewVM/vmSetup>
+
+:ref:`VM Hardware <VMHard>`
+
+:ref:`VM Software <VMSoft>`
+
+
+
+.. _HostOver:
+
+VM Host Machine
+-----------------
+s;efihewrogjf
+
+
+:ref:`VM Host Hardware <HostHard>`
+
+:ref:`VM Host Software <HostSoft>`
+

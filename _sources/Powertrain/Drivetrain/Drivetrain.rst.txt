@@ -1,0 +1,58 @@
+Drivetrain
+==========
+
+Parts Overview
+--------------
+.. toctree::
+   :maxdepth: 1
+
+   Differential <Differential/Differential>
+   Carriers <Differential/Diff Carriers>
+   Sprocket <Sprocket/Sprocket>
+   Others <self>
+
+
+Main goals of drivetrain:
+    | Serviceability
+    | Weight Savings
+    | Durability and reliability
+    | Minimize variation
+    | Finish endurance
+
+Overall Drivetrain Goals:
+    - Determine load at peak torque.
+    - Determine load at peak torque+launch
+    - Determine load at max acceleration seen in previous years
+    - Effects of fatigue need to be considered
+
+
+
+
+Bearings
+--------
+Bearing Goals:
+    - Bearing selection must consist of friction analysis on different bearings to reduce parasitic drivetrain losses.
+    - Tolerance study, least amount of power loss
+
+
+Gearing
+-------
+.. image:: ../all-ppt-images/Gearing.png
+.. image:: ../all-ppt-images/gearing2.jpg
+.. image:: ../all-ppt-images/gearing3.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

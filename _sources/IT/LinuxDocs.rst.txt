@@ -1,0 +1,36 @@
+Basic Linux Reference Docs
+===========================
+These are reference docs
+
+
+
+.. _DebRef:
+
+Debian
+--------
+wekfubws
+
+.. image:: Img/BasicsImg/debChtSht.png
+    :scale: 50%
+
+
+
+:download:`Full Debian Documentation <pdfs/debian-handbook.pdf>`
+
+
+
+
+.. _CentOSRef:
+
+CentOS
+-------
+ewuhf
+
+.. image:: Img/BasicsImg/rhel7Systemd.png
+    :scale: 50%
+
+
+
+:download:`Full RHEL7 Documentation <pdfs/rhel7Docs.pdf>`
+
+

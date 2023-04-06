@@ -1,0 +1,28 @@
+Hardware
+===========
+fwoiefhwl
+
+.. _ClustHard:
+
+Cluster Nodes
+-------------
+hard clust
+
+.. _HostHard:
+
+VM Host Machine
+-----------------
+hard host
+
+.. _VMHard:
+
+VMs
+-----
+hard vm
+
+.. _NetHard:
+
+Networking
+------------
+hard Net
+

@@ -1,0 +1,106 @@
+Crimson Racing Wiki
+======================================
+
+The main landing page for the Crimson Racing wiki page for knowledge transfer and general information.
+
+.. note::
+
+   This project is under active development.
+
+   Also I'm bad at documentation.
+
+.. container:: toc-cards
+
+   .. container:: card
+
+      .. figure:: Images/aero.jpg
+
+      :doc:`Aerodynamics/Aerodynamics`
+         The Aero Team
+
+   .. container:: card
+
+      .. figure:: Images/chassis.png
+
+      :doc:`Chassis/Chassis`
+         The Chassis Team
+   
+   .. container:: card
+
+      .. figure:: Images/electrical.png
+
+      :doc:`Electrical/Electrical`
+         The Electrical Team
+
+   .. container:: card
+
+      .. figure:: Images/ev.png
+
+      :doc:`EV/EV`
+         The EV Team
+
+   .. container:: card
+
+      .. figure:: Images/manufacturing.png
+
+      :doc:`Manufacturing/Manufacturing`
+         The Manufacturing Team
+
+   .. container:: card
+
+      .. figure:: Images/powertrain.png
+
+      :doc:`Powertrain/Powertrain`
+         The Powertrain Team
+
+   .. container:: card
+
+      .. figure:: Images/suspension.png
+
+      :doc:`Suspension/Suspension`
+         The Suspension Team
+
+   .. container:: card
+
+      .. figure:: Images/IT.jpg
+
+      :doc:`IT/IT`
+         The IT Department
+
+.. container:: global-index-toc
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: Subteams
+
+      Aerodynamics/Aerodynamics
+      Chassis/Chassis
+      Electrical/Electrical
+      EV/EV
+      Manufacturing/Manufacturing
+      Powertrain/Powertrain
+      Suspension/Suspension
+      IT/IT
+
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Programs
+
+   Programs/Ansys Fluent/Ansys Fluent
+   Programs/Ansys Icepak/Ansys Icepak
+   Programs/Ansys Mechanical/Ansys Mechanical
+   Programs/Blender/Blender
+   Programs/Excel/Excel
+   Programs/Fusion 360/Fusion 360
+   Programs/GT Suite/GT Suite
+   Programs/Hyperworks/Hyperworks
+   Programs/Lotus Shark/Lotus Shark
+   Programs/M1 Tune/M1 Tune
+   Programs/Matlab/Matlab
+   Programs/Motec i2 Pro/Motec i2 Pro
+   Programs/Solidworks/Solidworks
+   Programs/Win Geo/Win Geo
+
+

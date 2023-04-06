@@ -1,0 +1,200 @@
+Exhaust
+=======
+Goals for Exhaust:
+    | Rules Compliance
+    | 	Pass sound test at idle and ¾ engine speed
+    | 	Meet mounting requirements
+    | Manufacturability
+    | 	Reduce potential leak points
+    | 	Reduce time spent welding
+    | Weight Minimization
+    | 	Minimize part size while retaining strength requirements
+    | Power Output
+    | 	Design primary length to maintain power output from previous system
+    | 	Reduce backpressure as much as possible 
+
+The current objective for the powerplant system is to improve the engine
+output in the range of  8000-11000 RPM due to the current engine gearing
+and driver habits.
+
+Parts Overview
+--------------
+- Exhaust Manifold
+- Primaries
+- Thermocouples
+- Collector
+- Secondary
+- Lambda Sensor(s)
+- Muffler
+
+
+Overview
+--------
+**Material Selection**
+
+.. image:: ../all-ppt-images/exhaustmats.png
+
+Factors to consider:
+    | - Low-carbon steel is marginally lighter than stainless by density, but is susceptive to corrosion at high temperatures
+    | - Aluminum is much lighter than stainless, but will not hold up to exhaust temperatures (~1300º F)
+    | - Titanium is half as light as stainless, but twice as expensive
+
+
+
+Primary Runners
+---------------
+Goals for Primaries
+^^^^^^^^^^^^^^^^^^^
+- Manufactured product that matches CAD
+- No leaking from welds and NPT fittings
+- Weight stays within 15% of CR21 if muffler can be placed in the center of the car below the engine. If not, decrease system weight by 10%.
+- Analysis on GT-Suite comparing different lengths
+
+Pressure Wave Tuning
+^^^^^^^^^^^^^^^^^^^^
+Used to determine ideal primary length for a given reflective value
+
+Assumptions
+    No change in exhaust temperature
+    Full amplitude wave reflection at collector
+
+Primary length:
+
+.. math:: 𝐿=  ((𝐸𝐶𝐷∗𝐶))/(2∗𝑅𝑉∗(6∗𝑅𝑃𝑀))
+
+Speed of sound:
+
+.. math:: 𝐶=√(1.337∗𝑅∗𝑇)
+
+| C=Speed of sound in m/s
+| 1.337=specific heat constant at 1000K
+| R=Gas constant
+| T=Temperature in K
+
+**Design Choice**
+
+Achieves reflective value of 4 for 9000 rpm peak given packaging restraints with a goal of 11.63”
+
+.. image:: ../all-ppt-images/primary1.png
+
+Effective Cam Duration
+^^^^^^^^^^^^^^^^^^^^^^
+.. image:: ../all-ppt-images/camduration.png
+
+Primary Geometry
+^^^^^^^^^^^^^^^^
+| - 1.25” diameter pipe to maintain cross-sectional area between exhaust port and primaries
+| - Average length deviation of 0.3” between runners
+
+.. image:: ../all-ppt-images/primary2.png
+.. image:: ../all-ppt-images/primary3.png
+
+Mounting Solution
+^^^^^^^^^^^^^^^^^
+Individual mounting flanges
+    | - 19% Total Weight Reduction
+    | - Eliminates 16hrs manufacturing time by eliminating need to sand primaries to fit flush with engine
+
+
+Collector
+---------
+Welded vs. Slipfit Collector
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Welded
+	Not removable
+	Requires welds to seal
+	Open volume for primaries to dump into
+	1.5” collector diameter
+	
+Slipfit
+	Removable 
+	Seals by thermal expansion
+	Requires springs to retain
+	Merge bullet
+	2” collector diameter
+
+
+
+Secondary Runners
+-----------------
+Secondary Runner theory
+^^^^^^^^^^^^^^^^^^^^^^^
+**Steady state, incompressible flow analysis**
+
+Assumptions
+    Constant temperature across secondary
+    Incompressible
+    Constant mass flow rate
+
+**Principles used:**
+
+Fluid Energy Equation:
+
+.. math:: (𝑃_1/𝛾)+𝛼(𝑉_1^2/2𝑔)+ℎ_𝑝=(𝑃_2/𝛾)+𝛼(𝑉_2^2/2𝑔)+ℎ_𝑡+ℎ_𝐿
+
+Law of Conservation of Mass:
+
+.. math:: 𝐴_1 𝑉_1=𝐴_2 𝑉_2
+
+Secondary Runner Design
+^^^^^^^^^^^^^^^^^^^^^^^
+CR20:
+    Tapers from 1.5” v-band to 2” secondary
+    Muffler mounted via bolted flange
+
+CR21:
+    Eliminates taper
+    Muffler mounted via v-band
+    O2 sensor positioning must be considered
+    Calculated reduced backpressure by 3.37kPa (72%)
+
+
+Muffler
+-------
+
+Goals for Muffler
+^^^^^^^^^^^^^^^^^
+Pass sound
+    Idle@ 103 dbc
+    11000@ 110 dbc
+Back Pressure
+    Utilize a combination of perforated tubes, packing, and chambers
+    to ensure a smooth flow path for exhaust gasses. Do not put exhaust
+    gas through packing, but use perforated tubes to surround the flow.
+Mounting
+    Design a way to  mount the muffler so that it does not see a moment
+    at the secondary vband (as seen on CR21) and does not interfere with aero
+Weight
+    Ideally 10% drop in weight from CR21, if not then constant
+
+Muffler Theory
+^^^^^^^^^^^^^^
+Absorptive
+	Typically heavier due to packing material
+	Absorbs sound wave energy and turns into heat
+	Lowers sound level at all frequencies
+	Simple geometry
+	Lower backpressure
+
+Reactive
+	Typically lighter
+	Targets specific frequencies to reduce sound
+	Complex geometry
+	Higher backpressure
+
+**Muffler Effective Wavelength**
+
+.. image:: ../all-ppt-images/muffler2.png
+
+Muffler Design
+^^^^^^^^^^^^^^
+| - 1.25 lbs packing and perforated tube to absorb low rpm sound waves
+| - 12” section for high rpm wavelength cancellation
+| - Large back volume to allow for sound wave reflection back down 12” tube
+| - Flowpath is uninterrupted by packing material or baffles
+
+
+
+
+
+

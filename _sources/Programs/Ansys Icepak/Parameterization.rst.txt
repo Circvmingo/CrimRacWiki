@@ -1,0 +1,44 @@
+Parameterization
+================
+
+This documentation provides a step-by-step guide on how to perform parameterization in ANSYS Icepak 
+within ANSYS Electronics Desktop.
+
+Prerequisites
+-------------
+Before starting to paramaterize and optimize things, you will need to have:
+
+1. Created the starting geometry for the model
+2. Assigned material properties and boundary conditions for the model
+3. Created a setup for the initial model
+
+
+Defining Variables
+------------------------
+First, we need to define the variables for the project. to do so, go to the Project menu, right click on "Variables", and select
+"Add Variable". Give the variable a memorable name, and maybe a description if necessary. Then, set the initial value of the
+variable and give it units.
+
+
+Linking Variables to the Model
+-----------------------------------
+Find the component or setting you want to parameterize in the Icepak model, then right click and choose "Edit". 
+
+In the edit window, replace the fixed value with the variable name you created earlier, using the format
+"${VariableName}" (ex: "${Length}").
+
+Click "OK" to finalize the change.
+
+.. note::
+   Make sure to update the model after changing a variable's value to make sure that the changes have actually been applied.
+
+
+Running the Simulations
+-----------------------
+The part that really sucks about this is that you will need to run separate simulations manually for different values of the variable,
+since there isn't a built-in way to do parametric sweeps in ANSYS Electronics Desktop like there is in Ansys Workbench.
+
+To do this, you need to change the variable's value in the "Variables" section of the "Project" tab. Then, Update the Icepak model to
+reflect the new variable value by right-clicking on the model and selecting "Update." Save the model, run the simulation, and note down
+important values.
+

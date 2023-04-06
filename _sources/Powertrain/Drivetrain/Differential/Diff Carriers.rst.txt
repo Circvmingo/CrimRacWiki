@@ -1,0 +1,101 @@
+Diff Carriers
+=============
+
+Goals for Diff Carriers
+-----------------------
+In order to facilitate tuning of the differential and improve
+serviceability the differential must be easily removable. Use
+your best judgement in the best way to achieve this goal; in the
+past we have used tabs on the frame which the carriers bolt to,
+as well as engine pins that go through the carriers themselves.
+I would also like to see a tensioning system for the chain. We
+had to remake the carriers 7 times this past year so a tensioner
+should fix our issue. The carriers have had issues in the past
+with sims that do not converge. Figure out where this issue is
+coming from.
+
+
+Master Carrier
+--------------
+Master Accel
+^^^^^^^^^^^^
+Load Case comes from a 1.5 G acceleration
+
+Load (Acceleration): 
+    Radially : 3024 lbf (due to Acceleration) 
+    Axially : 26.76 lbf (due to bearings holders) 
+
+Yield Stress: 
+    39 ksi 
+
+Boundaries:
+    Fixed Hinge on mounting points
+    Roller/Slider on engine pin and frame contact areas
+
+Material: 
+    6061 Aluminum-T6
+
+.. image:: ../../all-ppt-images/mdiff1.png
+
+Master Decel
+^^^^^^^^^^^^
+Load Case comes from a 0.4 G Engine braking case
+
+Load (Deceleration): 
+    Radially : 920 lbf (due to engine braking) 
+    Axially : 26.76 lbf (due to bearings holders) 
+
+Yield Stress: 
+    39 ksi 
+
+Boundaries:
+    Fixed Hinge on mounting points
+    Roller/Slider on engine pin and frame contact areas
+
+Material: 
+    6061 Aluminum-T6
+
+.. image:: ../../all-ppt-images/mdiff2.png
+
+
+Slave Carrier
+-------------
+Slave Accel
+^^^^^^^^^^^
+Load Case comes from a 1.5 G acceleration case
+
+Load (Acceleration): 
+    Radially: 632 lbf (due to Acceleration) 
+    Axially: 26.76 lbf (due to bearings holders) 
+
+Yield Stress: 
+    39 ksi 
+
+Boundaries:
+    Fixed Hinge on mounting points
+    Roller/Slider on engine pin and frame contact areas
+
+Material: 
+    6061 Aluminum-T6
+
+.. image:: ../../all-ppt-images/sdiff1.png
+
+Slave Decel
+^^^^^^^^^^^
+Load Case comes from a 0.4 G Engine braking case
+
+Load (Deceleration): 
+    Radially : 189 lbf (due to engine braking) 
+    Axially : 26.76 lbf (due to bearings holders) 
+
+Yield Stress: 
+    39 ksi 
+
+Boundaries:
+    Fixed Hinge on mounting points
+    Roller/Slider on engine pin and frame contact areas
+
+Material: 
+    6061 Aluminum-T6
+
+.. image:: ../../all-ppt-images/sdiff2.png

@@ -1,0 +1,126 @@
+Intake
+======
+.. _Intake:
+
+Main goals of intake:
+    | Maintain serviceability, increase where possible
+    | Improve manufacturability
+    | Increase engine output at peak 12000 RPM
+
+The current objectives for the powerplant system is to improve the engine
+output in the range of 8000-11000 RPM due to the current engine gearing,
+maintain reliability, and improve manufacturing ease and tolerances.
+
+
+Parts Overview
+--------------
+- Intake Manifold
+- Throttle Assembly
+- Air Filter
+- Restrictor
+- Plenum
+- Runners
+
+
+Manufacturing/Servicing
+-----------------------
+
+I'm not downloading all of those images elliot. Sorry :/
+
+
+Components
+----------
+
+Air Filter
+^^^^^^^^^^
+
+K&N RC 2500 Air Filter
+
+Flow bench data shows that three K&N filters have very similar flow properties,
+lightest one was chosen (0.2 vs 0.4 lbs)
+
+.. image:: ../all-ppt-images/Air-filter.png
+    :scale: 75%
+    
+Throttle Body
+^^^^^^^^^^^^^
+Goals for Throttle Body
+```````````````````````
+\- Proper incorporation of the Bosch 40 mm electronic throttle body
+and mechanical throttle body and freedom with the use of a Wiggin’s
+clamp at the base of the restrictor.
+
+Restrictor
+^^^^^^^^^^
+\- Analysis must be completed with regards to diffuser length and its
+effect on pressure recovery as well as varying throat geometry and location
+along the length of the duct. Results must show a comparison of hand
+calculations, CFD results, and flow bench results.
+
+| **Theoretical mass flow when choked:**
+| 0.0769 kg/s
+
+.. math:: 𝑚𝑑𝑜𝑡=  (𝑃_0 (𝑎^∗))/√(𝑇_0 )∗√(Ɣ/𝑅(〖2/(Ɣ+1))〗^((Ɣ+1)/(Ɣ−1)) )
+
+| 𝑃\ :sub:`0`\  is inlet pressure
+| 𝑎\ :sup:`*`\  is throat area
+| 𝑇\ :sub:`0`\  is inlet temperature
+| Ɣ is gamma of the fluid
+| R is the universal gas constant
+
+CFD Run Conditions:
+    | •Energy equation used
+    | •K-epsilon Turbulence model
+    | •Density based
+    | •Axisymmetric
+    | •Pressure inlet 
+    |  •101,300 KPa
+    |  •300 K
+    | •Pressure outlet
+    |   •12.5 KPa gauge pressure
+    |   •300 K
+    | •Ideal gas
+    | •Boundary conditions
+    |   •Wall
+    |   •Axis
+    |   •Inlet 
+    |   •outlet
+
+.. image:: ../all-ppt-images/cfd1.jpg
+    :scale: 50%
+.. image:: ../all-ppt-images/cfd2.jpg
+    :scale: 75%
+
+
+Plenum
+^^^^^^
+.. image:: ../all-ppt-images/plenum.png
+
+Goals for Plenum
+````````````````
+\- In an effort to reduce weight and lower powertrain cg 
+the plenum should be made from carbon fiber. Alternatively, 3d printing is an option.
+
+Runners
+^^^^^^^
+| Length determined with Matlab wave tuning script
+|   •Target 12000 RPM
+|   •Speed of sound calculation
+|       •Fluid properties pulled from drive data
+
+.. math:: L = (EffectiveCamDuration*C) /(RPM*RV*2*6)
+
+.. image:: ../all-ppt-images/Runners1.jpg
+
+
+Goals for Runners
+`````````````````
+\- Bellmouth design needs to be re-evaluated and confirmed using both
+CFD and physicaltesting on a flow bench.
+
+\- The taper of the runners needs to be evaluated from both a performance
+and manufacturing standpoint and tested on a flow bench.
+
+
+
+

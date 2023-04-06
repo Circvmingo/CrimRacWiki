@@ -1,0 +1,108 @@
+Fuel
+====
+Main goals of fuel:
+    | Reliability
+    | 	Leak-test fuel system
+    | 	Integrate high-pressure PTFE fuel lines
+    | Manufacturability
+    | 	Minimize cost of materials
+    | 	Minimize manufacturing time
+    | Weight Minimization
+    | 	Consider fuel cell material and wall thickness
+    | 	Minimize fuel cell volume
+    | Power Output
+    | 	Injector characterization 
+    | 	Fuel capacity for endurance
+
+Parts Overview
+--------------
+- Fuel Tank
+- Filler Neck
+- Top Port
+- Fuel Pump
+- Hydramat
+- Fuel Lines
+- Bulkhead fittings
+- Fuel Filter
+- Fuel Rail
+- Fuel Pressure Regulator
+
+
+Fuel Cell
+---------
+Goals for Fuel Cell:
+    The tank volume will need to be 1.75 gallons (+-0.1 gallons) given
+    the fuel issues we had with CR21 endurance. Considerations should
+    include hydramat area as well as the CG of the tank. The new tank must
+    not be susceptible to cornering as this is a current issue and will
+    be more so with greater values of lateral acceleration from wings
+    (1.5 G’s consistently in skid pad with aero). This can be done using
+    the hydramat to cover the entirety of the bottom of the tank.
+
+    Reliability: There can be absolutely no leaks from the fuel tank ever.
+    The top port (if needed) will need to have a larger area for the sealing surface(s).
+
+
+**CF vs. Aluminum Tank**
+.. image:: ../all-ppt-images/fuelcell1.png
+
+Fuel Filler Neck
+----------------
+Goals for Filler Neck:
+    Removable filler neck that complies with all rules and is out of
+    view of the driver to reduce the amount of firewalls needed. If
+    the filler neck attaches at the bottom of the tank, include a
+    breather tube from the top of the tank to the top of the neck to
+    allow air to escape when filling. 
+
+
+Plumbing
+--------
+Goals for Plumbing:
+    All fuel line must be modeled in SolidWorks and must be sourced
+    from BMRS. By switching to BMRS line, the system was improved as
+    the lines could support a higher pressure, had wear resistant
+    braiding, eliminated the need of hose clamps, and reduced the weight
+    by 0.256 lbs. Bulkhead fittings are mandatory.
+
+.. image:: ../all-ppt-images/fuelplumbing1.png
+
+Rubber line was not considered due to reliability issues in the past with sealing and pressure retention
+
+Fuel Rail
+---------
+Goals for Fuel Rail:
+    A new fuel rail will need to be designed. This design needs to
+    involve the mounting technique used, pressure sensor location,
+    and inlet and outlet ports for the fuel lines. Please factor in
+    manufacturability into the design as this is the first time we
+    have made a fuel rail in-house. Be sure to match the injector port
+    size to the size of the selected injectors we will run.
+
+Modified OEM Rail
+	1 hour manufacturing time
+	0 Cost
+	Stock primary injectors 
+Custom Rail
+	Estimated 16 hours manufacturing time
+	Requires buying stock
+	Any choice injector
+
+Injectors
+---------
+Goals for Injectors:
+    An evaluation of injector options should be performed, emphasizing
+    max duty cycle, availability of characterization data, and size of
+    fuel rail injector ports.
+
+a ton of images I'm not about to copy over
+
+
+
+
+
+
+
+
+
+
