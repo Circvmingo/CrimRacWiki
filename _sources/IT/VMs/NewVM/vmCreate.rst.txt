@@ -11,7 +11,7 @@ Step 1: Create a New VM
 ------------------------
 
 .. image:: vmCrImgs/img1.png
-    :scale: 50%
+    :scale: 25%
 
 In the top right, under the Datacenter dropdown, right click on CrimsonRacingServer, and select the item labeled *Create VM*.
 
@@ -20,7 +20,7 @@ Step 2: General Settings
 --------------------------
 
 .. image:: vmCrImgs/general.png
-    :scale: 50%
+    :scale: 25%
 
 Here is where you set the general settings for the VM.
 
@@ -48,7 +48,7 @@ Step 3: OS Settings
 ---------------------
 
 .. image:: vmCrImgs/OS.png
-    :scale: 50%
+    :scale: 25%
 
 This is where you designate what operating system your VM will run on.
 
@@ -71,7 +71,7 @@ Step 4: System Settings
 ------------------------
 
 .. image:: vmCrImgs/system.png
-    :scale: 50%
+    :scale: 25%
 
 This is where you define what system the VM will operate on, as well as what BIOS architecture the VM will use.
 
@@ -100,7 +100,7 @@ Step 5: Disk Settings
 ----------------------
 
 .. image:: vmCrImgs/disks.png
-    :scale: 50%
+    :scale: 25%
 
 This is where you allocate disk space for your VM.
 
@@ -140,7 +140,7 @@ Step 6: CPU Settings
 ---------------------
 
 .. image:: vmCrImgs/cpu.png
-    :scale: 50%
+    :scale: 25%
 
 This is where you allocate the amount of CPU cores which this VM can take advantage of. Generally, the best amount of cores is the
 fewest amount of cores, since the server has a finite amount of resources.
@@ -164,7 +164,7 @@ Step 7: Memory Settings
 --------------------------
 
 .. image:: vmCrImgs/memory.png
-    :scale: 50%
+    :scale: 25%
 
 This is where the total memory allocated to this VM is set. Luckily for us, Proxmox will dynamically allocate memory to VMs. This means
 that if a VM is set to have 10gb of RAM but only needs 5gb, Proxmox will free up the other 5gb and give them to another VM which needs
@@ -182,7 +182,7 @@ Step 8: Network Settings
 -------------------------
 
 .. image:: vmCrImgs/network.png
-    :scale: 50%
+    :scale: 25%
 
 Bridge
 ^^^^^^^
@@ -213,7 +213,7 @@ bottom right corner. Don't be too worried if any of this got messed up, as most 
 created.
 
 .. image:: vmCrImgs/startup.png
-    :scale: 50%
+    :scale: 15%
 
 Wait for it to finish being created, and then select your new VM in the dropdown menu under Datacenter->CrimsonRacingServer.
 
